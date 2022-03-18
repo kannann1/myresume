@@ -9,17 +9,17 @@ class Certification extends React.Component {
         return (
             <div>
               
-                        <div className="columns timeline">
+              <div className="columns timeline">
                             <div className="circle is-hidden-mobile"></div>
-                            <div className="column is-6 has-text-right is-hidden-mobile">
-                                <div className="time">{time}</div>
-                            </div>
-                            <div className="column right is-6 has-text-left">
-                                <div className="arrow arrow-left"></div>
-                                <div className="detail detail-right">
+                            <div className="column left is-6 has-text-right">
+                                <div className="arrow arrow-right"></div>
+                                <div className="detail detail-left">
                                     <p className="is-hidden-tablet">{time}</p>
                                     {children}
                                 </div>
+                            </div>
+                            <div className="column is-6 has-text-left is-hidden-mobile">
+                                <div className="time">{time}</div>
                             </div>
                         </div>
                 <style jsx>{`
