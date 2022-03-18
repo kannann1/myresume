@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "next",
-    "build": "NETLIFY_NEXT_PLUGIN_SKIP=true next build && next export",
-    "export": "NETLIFY_NEXT_PLUGIN_SKIP=true next build && next export .",
+    "build": "cross-env NETLIFY_NEXT_PLUGIN_SKIP=true next build && next export",
+    "export": "cross-env NETLIFY_NEXT_PLUGIN_SKIP=true next build && next export .",
     "start": "next start",
     "analyze": "cross-env ANALYZE=1 next build"
   },
