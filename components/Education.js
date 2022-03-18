@@ -9,17 +9,17 @@ export default class Education extends React.Component {
                 <Title title="Education" color='#ffffff'/>
                 <div className="container">
                     <Item 
-                        time="2014 - 2017 (B.Sc.)"
-                        name="King Mongkut's Institute of Technology Ladkrabang (KMITL)"
-                        major="Computer Science"
-                        gpa="3.82"
+                        time="2013 - 2015 (Masters of Business Administration)"
+                        name="Bharathidasan University"
+                        major="Computer Systems &amp; HR"
                         color="#2ecc71"
                     />
                     <Item 
-                        time="2008 - 2013 (High School)"
-                        name="Phanatpitayakarn School"
-                        gpa="3.49"
+                        time="2010 - 2013 (BTech)"
+                        name="SASTRA University"
+                        gpa="8.08"
                         color="#3498db"
+                        major="Computer Science &amp; Engineering"
                     />
                 </div>
                 

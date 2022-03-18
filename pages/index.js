@@ -5,6 +5,7 @@ import About from './../components/About'
 import Experiences from './../components/Experiences'
 import Education from './../components/Education'
 import Skills from './../components/Skills'
+import Certifications from './../components/Certifications'
 
 export default class Index extends React.Component {
     constructor() {
@@ -27,6 +28,7 @@ export default class Index extends React.Component {
                    <Experiences />
                    <Education />
                    <Skills />
+                   <Certifications />
                    <style jsx global>{`
                         body {
                             font-family: 'Questrial', sans-serif;

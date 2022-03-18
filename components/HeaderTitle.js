@@ -8,7 +8,7 @@ const cursor = {
 export default ({color}) => (
     <div className="is-hidden-touch">
         <Typist cursor={cursor}>
-            I'm <span>Nut</span>tawut
+            I'm <span>Kannan </span>
         </Typist>
         <style jsx>{`
             div {

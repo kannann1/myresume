@@ -4,6 +4,7 @@ import ProfileImage from './HeaderProfile';
 import Brace from './HeaderBrace'
 import Title from './HeaderTitle'
 import Button from './HeaderButton'
+
 const themes = {
     light: {
         background: '#f5f5f5',
@@ -33,29 +34,29 @@ export default class Header extends React.Component {
     render() {
         let theme = themes[this.state.theme];
         return (
-            <section className="hero is-fullheight has-text-centered">
-                <div className="hero-body">
-                    <div className="container">
-                        <div className="columns is-mobile">
-                            <Brace type="left" color={theme.font}/>
-                            <ProfileImage toggle={this.toggleTheme.bind(this)} />
-                            <Brace type="right" color={theme.font}/>
-                        </div>
-                        <div className="columns">
+<section className="hero is-fullheight has-text-centered">
+    <div className="hero-body">
+        <div className="container">
+            <div className="columns is-mobile">
+                <Brace type="left" color={theme.font}/>
+<ProfileImage toggle={this.toggleTheme.bind(this)} />
+<Brace type="right" color={theme.font}/>
+</div>
+<div className="columns">
+                    <div className="column">
+                        <Title color={theme.font}/>
+</div>
+</div>
+<div className="columns">
                             <div className="column">
-                                <Title color={theme.font}/>
-                            </div>
-                        </div>
-                        <div className="columns">
-                            <div className="column">
-                                <Button title="My GitHub" url="https://github.com/nutanek" />
-                                <Button title="My Works" url="https://www.indytheme.com" />                                
+                                <Button title="My Credentials" url="https://www.credly.com/users/kannann1" />
+                                <Button title="My GitHub" url="https://github.com/kannann1" />
                             </div>
                         </div>
                     </div>
                     <Background color={theme.background}/>
-                </div>
-            </section>
+</div>
+</section>
         )
     }
 }

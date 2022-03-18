@@ -12,39 +12,56 @@ export default class Skills extends React.Component {
                     { name: 'html5', color: '#f16529', value: '75' },
                     { name: 'css3', color: '#29a9df', value: '70' },
                     { name: 'sass', color: '#cb6699', value: '50' },
-                    { name: 'bootstrap', color: '#8b57d9', value: '80' },                
+                    { name: 'bootstrap', color: '#8b57d9', value: '70' },                
                     { name: 'javascript', color: '#f7df1e', value: '70' },
                     { name: 'jquery', color: '#288cc4', value: '60' },
-                    { name: 'angularjs', color: '#dd0330', value: '60' },
-                    { name: 'reactjs', color: '#61d9fa', value: '45' },
-                    { name: 'vuejs', color: '#41b883', value: '25' },
+                    { name: 'reactjs', color: '#61d9fa', value: '70' },
+                    { name: 'angularjs', color: '#dd0330', value: '40' },
                 ]
             },
             {
                 name: 'Back-ends',
                 list: [
-                    { name: 'php', color: '#8993be', value: '70' },           
-                    { name: 'nodejs', color: '#81ca2a', value: '70' },
-                    { name: 'java', color: '#1e77b7', value: '70' },
-                    { name: 'rails', color: '#e74c3c', value: '60' }
+                    { name: 'java', color: '#1e77b7', value: '80' },
+                    { name: 'spring', color: '#e74c3c', value: '80' },
+                    { name: 'quarkus', color: '#6dcdff', value: '75' },
+                    { name: 'nodejs', color: '#81ca2a', value: '60' },
+                    { name: 'kotlin', color: '#dd0330', value: '55' },
+                    { name: 'python', color: '#cb3736', value: '50' },
                 ]
             },
             {
                 name: 'Databases',
                 list: [
-                    { name: 'mysql', color: '#0784af', value: '65' },
-                    { name: 'firebase', color: '#ffcb2c', value: '55' }
+                    { name: 'mysql', color: '#0784af', value: '50' },
+                    { name: 'oracle', color: '#ffcb2c', value: '75' },
+                    { name: 'postgres', color: '#18bbb0', value: '70' },
+                    { name: 'mongodb', color: '#6dcdff', value: '70' },
+                    { name: 'elasticsearch', color: '#cb3736', value: '65' }
+                ]
+            },
+            {
+                name: 'Cloud',
+                list: [
+                    { name: 'aws', color: '#F05032', value: '70' },
+                    { name: 'ibmcloud', color: '#18bbb0', value: '70' },
+                    { name: 'azure', color: '#cb3736', value: '50' },
+                    { name: 'oci', color: '#6dcdff', value: '50' }
                 ]
             },
             {
                 name: 'Tools',
                 list: [
-                    { name: 'git', color: '#F05032', value: '60' },
-                    { name: 'yarn', color: '#2c8ebb', value: '40' },
-                    { name: 'npm', color: '#cb3736', value: '55' },
-                    { name: 'webpack', color: '#6dcdff', value: '25' },
-                    { name: 'rundeck', color: '#ff0000', value: '45' },
-                    { name: 'elasticsearch', color: '#18bbb0', value: '40' },
+                    { name: 'git', color: '#F05032', value: '80' },
+                    { name: 'maven', color: '#18bbb0', value: '80' },
+                    { name: 'npm', color: '#cb3736', value: '60' },
+                    { name: 'webpack', color: '#6dcdff', value: '30' },
+                    { name: 'knative', color: '#ff0000', value: '40' },
+                    { name: 'istio', color: '#0784af', value: '45' },
+                    { name: 'terraform', color: '#81ca2a', value: '65' },
+                    { name: 'ansible', color: '#2c8ebb', value: '60' },
+                    { name: 'jenkinsx', color: '#8b57d9', value: '55' },
+                    { name: 'kafka', color: '#dd0330', value: '55' },
                 ]
             } 
         ]

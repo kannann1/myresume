@@ -1,7 +1,7 @@
 {
-  "name": "resume-nextjs",
+  "name": "kannan-resume",
   "version": "1.0.0",
-  "description": "Resume website with NextJS",
+  "description": "Resume website for Kannan",
   "main": "index.js",
   "scripts": {
     "dev": "next",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nutanek/resume-nextjs.git"
+    "url": "https://github.com/kannann1/myresume.git"
   },
   "keywords": [
     "ReactJS",
@@ -21,9 +21,9 @@
   "author": "NutAnek",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nutanek/resume-nextjs/issues"
+    "url": "https://github.com/kannann1/myresume/issues"
   },
-  "homepage": "https://github.com/nutanek/resume-nextjs#readme",
+  "homepage": "https://github.com/kannann1/myresume.git#readme",
   "dependencies": {
     "autoprefixer": "^7.1.5",
     "babel-loader": "^7.1.2",
