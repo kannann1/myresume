@@ -27,6 +27,7 @@
   "dependencies": {
     "@netlify/plugin-nextjs": "^4.2.7",
     "autoprefixer": "^7.1.5",
+    "babel-core": "^6.26.3",
     "babel-loader": "^7.1.2",
     "glob": "^7.1.2",
     "next": "^10.0.6",
