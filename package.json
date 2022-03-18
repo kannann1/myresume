@@ -25,9 +25,9 @@
   },
   "homepage": "https://github.com/kannann1/myresume.git#readme",
   "dependencies": {
+    "@babel/core": "^7.17.8",
     "@babel/preset-env": "^7.16.11",
     "autoprefixer": "^7.1.5",
-    "babel-core": "^6.26.3",
     "babel-loader": "^8.2.3",
     "emit-file-loader": "^0.0.2",
     "glob": "^7.1.2",
