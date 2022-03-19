@@ -1,12 +1,10 @@
 import React from 'react'
 
-export default class Title extends React.Component {
-  render () {
-    const { title, color } = this.props
-    return (
-      <div>
-        {title}
-        <style jsx>{`
+export default ({ title, color }) => {
+  return (
+    <div>
+      {title}
+      <style jsx>{`
                     div {
                         margin-bottom: 30px;
                         color: ${color};
@@ -20,8 +18,7 @@ export default class Title extends React.Component {
                         }
                     }
                 `}
-        </style>
-      </div>
-    )
-  }
+      </style>
+    </div>
+  )
 }

@@ -1,46 +1,44 @@
 import React from 'react'
 
-export default class ExperiencesTimelineItem extends React.Component {
-  render () {
-    const { time, side, color, children } = this.props
-    const lineColor = '#7f8c8d'
+export default ({ time, side, color, children }) => {
+  const lineColor = '#7f8c8d'
 
-    return (
-      <div>
-        {
-                    side === 'left'
-                      ? (
-                        <div className='columns timeline'>
-                          <div className='circle is-hidden-mobile' />
-                          <div className='column left is-6 has-text-right'>
-                            <div className='arrow arrow-right' />
-                            <div className='detail detail-left'>
-                              <p className='is-hidden-tablet'>{time}</p>
-                              {children}
-                            </div>
-                          </div>
-                          <div className='column is-6 has-text-left is-hidden-mobile'>
-                            <div className='time'>{time}</div>
-                          </div>
-                        </div>
-                        )
-                      : (
-                        <div className='columns timeline'>
-                          <div className='circle is-hidden-mobile' />
-                          <div className='column is-6 has-text-right is-hidden-mobile'>
-                            <div className='time'>{time}</div>
-                          </div>
-                          <div className='column right is-6 has-text-left'>
-                            <div className='arrow arrow-left' />
-                            <div className='detail detail-right'>
-                              <p className='is-hidden-tablet'>{time}</p>
-                              {children}
-                            </div>
-                          </div>
-                        </div>
-                        )
+  return (
+    <div>
+      {
+        side === 'left'
+          ? (
+            <div className='columns timeline'>
+              <div className='circle is-hidden-mobile' />
+              <div className='column left is-6 has-text-right'>
+                <div className='arrow arrow-right' />
+                <div className='detail detail-left'>
+                  <p className='is-hidden-tablet'>{time}</p>
+                  {children}
+                </div>
+              </div>
+              <div className='column is-6 has-text-left is-hidden-mobile'>
+                <div className='time'>{time}</div>
+              </div>
+            </div>
+            )
+          : (
+            <div className='columns timeline'>
+              <div className='circle is-hidden-mobile' />
+              <div className='column is-6 has-text-right is-hidden-mobile'>
+                <div className='time'>{time}</div>
+              </div>
+              <div className='column right is-6 has-text-left'>
+                <div className='arrow arrow-left' />
+                <div className='detail detail-right'>
+                  <p className='is-hidden-tablet'>{time}</p>
+                  {children}
+                </div>
+              </div>
+            </div>
+            )
                 }
-        <style jsx>{`
+      <style jsx>{`
                     .timeline {
                         position: relative;
                     }
@@ -109,8 +107,7 @@ export default class ExperiencesTimelineItem extends React.Component {
                         }
                     }
                 `}
-        </style>
-      </div>
-    )
-  }
+      </style>
+    </div>
+  )
 }

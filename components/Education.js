@@ -2,28 +2,27 @@ import React from 'react'
 import Title from './Title'
 import Item from './EducationItem'
 
-export default class Education extends React.Component {
-  render () {
-    return (
-      <section className='hero wrapper has-text-centered'>
-        <Title title='Education' color='#ffffff' />
-        <div className='container'>
-          <Item
-            time='2013 - 2015 (Masters of Business Administration)'
-            name='Bharathidasan University'
-            major='Computer Systems &amp; HR'
-            color='#2ecc71'
-          />
-          <Item
-            time='2010 - 2013 (BTech)'
-            name='SASTRA University'
-            gpa='8.08'
-            color='#3498db'
-            major='Computer Science &amp; Engineering'
-          />
-        </div>
+export default () => {
+  return (
+    <section className='hero wrapper has-text-centered'>
+      <Title title='Education' color='#ffffff' />
+      <div className='container'>
+        <Item
+          time='2013 - 2015 (Masters of Business Administration)'
+          name='Bharathidasan University'
+          major='Computer Systems &amp; HR'
+          color='#2ecc71'
+        />
+        <Item
+          time='2010 - 2013 (BTech)'
+          name='SASTRA University'
+          gpa='8.08'
+          color='#3498db'
+          major='Computer Science &amp; Engineering'
+        />
+      </div>
 
-        <style jsx>{`
+      <style jsx>{`
                     .wrapper {
                         padding-top: 50px;
                         padding-bottom: 50px;
@@ -33,8 +32,7 @@ export default class Education extends React.Component {
                         font-size: 1.3em;
                     }
                 `}
-        </style>
-      </section>
-    )
-  }
+      </style>
+    </section>
+  )
 }

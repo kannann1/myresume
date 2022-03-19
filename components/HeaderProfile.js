@@ -1,13 +1,12 @@
 import React from 'react'
 
-export default class HeaderBrace extends React.Component {
-  render () {
-    return (
-      <div className='column profile'>
-        <figure className='image' onClick={() => this.props.toggle()}>
-          <img src='/static/images/profile.png' />
-        </figure>
-        <style jsx>{`
+export default () => {
+  return (
+    <div className='column profile'>
+      <figure className='image' onClick={() => this.props.toggle()}>
+        <img src='/static/images/profile.png' />
+      </figure>
+      <style jsx>{`
                     .profile {
                         display: flex;
                         justify-content: center;
@@ -52,8 +51,7 @@ export default class HeaderBrace extends React.Component {
                         }
                     }
                 `}
-        </style>
-      </div>
-    )
-  }
+      </style>
+    </div>
+  )
 }

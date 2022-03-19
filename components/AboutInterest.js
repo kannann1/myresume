@@ -1,30 +1,29 @@
 import React from 'react'
 
-export default class AboutInterest extends React.Component {
-  render () {
-    const items = ['Coding', 'Reading', 'Taking Photo']
-    return (
-      <div>
-        <div className='columns topic'>
-          <div className='column has-text-left is-6 is-offset-3 is-10-mobile is-offset-1-mobile'>
-            My Interests
-          </div>
+export default () => {
+  const items = ['Coding', 'Reading', 'Taking Photo']
+  return (
+    <div>
+      <div className='columns topic'>
+        <div className='column has-text-left is-6 is-offset-3 is-10-mobile is-offset-1-mobile'>
+          My Interests
         </div>
-        <div className='columns item'>
-          <div className='column is-6 is-offset-3 is-8-mobile is-offset-2-mobile'>
-            {
-                            items.map((item, index) =>
-                              <img
-                                key={index}
-                                src={'/static/images/interest-' + (index + 1) + '.svg'}
-                                title={item}
-                              />
-                            )
-                        }
+      </div>
+      <div className='columns item'>
+        <div className='column is-6 is-offset-3 is-8-mobile is-offset-2-mobile'>
+          {
+                items.map((item, index) =>
+                  <img
+                    key={index}
+                    src={'/static/images/interest-' + (index + 1) + '.svg'}
+                    title={item}
+                  />
+                )
+                }
 
-          </div>
         </div>
-        <style jsx>{`
+      </div>
+      <style jsx>{`
                     .topic {
                         font-weight: bold;
                         color: #ffcc00;
@@ -39,9 +38,8 @@ export default class AboutInterest extends React.Component {
                         transform: scale(1.5); 
                     }
                 `}
-        </style>
-      </div>
+      </style>
+    </div>
 
-    )
-  }
+  )
 }
