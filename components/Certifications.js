@@ -22,6 +22,7 @@ class Certification extends React.Component {
                                 <div className="time">{time}</div>
                             </div>
                         </div>
+                    
                 <style jsx>{`
                     .timeline {
                         position: relative;
@@ -90,6 +91,13 @@ class Certification extends React.Component {
                             border-left: 0px;
                         }
                     }
+                    .legend { list-style: none; }
+.legend li { float: left; margin-right: 10px; }
+.legend span { border: 1px solid #ccc; float: left; width: 12px; height: 12px; margin: 2px; }
+.legend .superawesome { background-color: #ff00ff; }
+.legend .awesome { background-color: #00ffff; }
+.legend .kindaawesome { background-color: #0000ff; }
+.legend .notawesome { background-color: #000000; }
                 `}</style>
             </div>
         )
@@ -107,7 +115,7 @@ export default class Certifications extends React.Component {
              <Certification time="August 12, 2020" color="#228B22">
                     <h4 style={{'color': '#228B22'}}>Oracle Cloud Infrastructure 2019 Certified Architect Professional</h4>
         </Certification>
-        <Certification time="December 31, 2021" color="#228B22">
+        <Certification time="August 08, 2018" color="#228B22">
                     <h4 style={{'color': '#228B22'}}>AWS Certified Solutions Architect – Associate</h4>
         </Certification>
              <Certification time="August 01, 2018" color="#e67e22">
@@ -126,6 +134,20 @@ export default class Certifications extends React.Component {
                     <h4 style={{'color': '#3498db'}}>Microsoft Certified Professional Programming in HTML5 with JavaScript and CSS3</h4>
         </Certification>
         </div>
+        <ul className="legend">
+    <li><span className="cloud"></span> Cloud Certs</li>
+    <li><span className="programming"></span> Programming Certs</li>
+    <li><span className="management"></span> Management Certs</li>
+    <li><span className="othersystems"></span> Other Certs</li>
+</ul><style jsx>{`
+                    .legend { list-style: none; }
+.legend li { float: left; margin-right: 10px; }
+.legend span { border: 1px solid #ccc; float: left; width: 12px; height: 12px; margin: 2px; }
+.legend .cloud { background-color: #228B22; }
+.legend .programming { background-color: #3498db; }
+.legend .management { background-color: #e67e22; }
+.legend .othersystems { background-color: #9b59b6; }
+                `}</style>
         </section>
 )
     }

@@ -77,8 +77,7 @@ export default class Skills extends React.Component {
                         ))
                     }
                 </div>
-                
-                <style jsx>{`
+            <style jsx>{`
                     .wrapper {
                         padding-top: 50px;
                         padding-bottom: 50px;
