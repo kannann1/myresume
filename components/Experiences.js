@@ -14,9 +14,9 @@ export default class Experiences extends React.Component {
                         <ul style={{textAlign: 'left', 'padding': '0', 'margin': '0', listStyleType: 'circle'}}>
                             <li>Fully responsible for end to end development, deployment and maintenance of highly scalable property data platform</li>
                             <li>Built several Microservices based cloud native services using Quarkus Java / Kotlin</li>
+                            <li>Built frontend application using React &amp; NextJS</li>
                             <li>Applied CI/CD practices and deployed containerized applications and managed them with Kubernetes, Helm &amp; Knative.</li>
                             <li>Manage entire platform using GitOps strategy(JenkinsX)</li>
-                            <li>Built frontend application using React &amp; NextJS</li>
                             <li>Manage applications running across different cloud platforms like AWS, Azure and GCP</li>
                         </ul>
                     </Timeline> 
@@ -24,7 +24,7 @@ export default class Experiences extends React.Component {
                         <h4 style={{'color': '#3498db'}}>IBM UK</h4>
                         <i className="position">Software Engineer - Microservices &amp; DevOps</i><br/>
                         <ul style={{textAlign: 'left', 'padding': '0', 'margin': '0', listStyleType: 'disc'}}>
-                            <li>Built 10's of Spring Boot services which were part of Microservices based system for a public sector client</li>
+                            <li>Built 10+ Spring Boot services which were part of Microservices based system for a public sector client</li>
                             <li>Demonstrated a strong drive to learn and advocate for development best practices(TDD, BDD, code reviews, peer programming, etc)</li>
                             <li>Built filtering services using GraphQL and NodeJS</li>
                             <li>Involved in migration of applications from Virtual Machines(EC2) to Kubernetes clusters(EKS)</li>

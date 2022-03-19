@@ -7,19 +7,6 @@ export default class Skills extends React.Component {
     render() {
         const skillImgs = [
             {
-                name: 'Front-ends',
-                list: [
-                    { name: 'html5', color: '#f16529', value: '75' },
-                    { name: 'css3', color: '#29a9df', value: '70' },
-                    { name: 'sass', color: '#cb6699', value: '50' },
-                    { name: 'bootstrap', color: '#8b57d9', value: '70' },                
-                    { name: 'javascript', color: '#f7df1e', value: '70' },
-                    { name: 'jquery', color: '#288cc4', value: '60' },
-                    { name: 'reactjs', color: '#61d9fa', value: '70' },
-                    { name: 'angularjs', color: '#dd0330', value: '40' },
-                ]
-            },
-            {
                 name: 'Back-ends',
                 list: [
                     { name: 'java', color: '#1e77b7', value: '80' },
@@ -28,16 +15,6 @@ export default class Skills extends React.Component {
                     { name: 'nodejs', color: '#81ca2a', value: '60' },
                     { name: 'kotlin', color: '#dd0330', value: '55' },
                     { name: 'python', color: '#cb3736', value: '50' },
-                ]
-            },
-            {
-                name: 'Databases',
-                list: [
-                    { name: 'mysql', color: '#0784af', value: '50' },
-                    { name: 'oracle', color: '#ffcb2c', value: '75' },
-                    { name: 'postgres', color: '#18bbb0', value: '70' },
-                    { name: 'mongodb', color: '#6dcdff', value: '70' },
-                    { name: 'elasticsearch', color: '#cb3736', value: '65' }
                 ]
             },
             {
@@ -50,18 +27,41 @@ export default class Skills extends React.Component {
                 ]
             },
             {
+                name: 'Front-ends',
+                list: [
+                    { name: 'html5', color: '#f16529', value: '75' },
+                    { name: 'css3', color: '#29a9df', value: '70' },
+                    { name: 'bootstrap', color: '#8b57d9', value: '70' },                
+                    { name: 'javascript', color: '#f7df1e', value: '70' },
+                    { name: 'reactjs', color: '#61d9fa', value: '70' },
+                    { name: 'jquery', color: '#288cc4', value: '60' },
+                    { name: 'sass', color: '#cb6699', value: '50' },
+                    { name: 'angularjs', color: '#dd0330', value: '40' },
+                ]
+            },
+            {
                 name: 'Tools',
                 list: [
                     { name: 'git', color: '#F05032', value: '80' },
                     { name: 'maven', color: '#18bbb0', value: '80' },
-                    { name: 'npm', color: '#cb3736', value: '60' },
-                    { name: 'webpack', color: '#6dcdff', value: '30' },
-                    { name: 'knative', color: '#ff0000', value: '40' },
-                    { name: 'istio', color: '#0784af', value: '50' },
                     { name: 'terraform', color: '#81ca2a', value: '65' },
+                    { name: 'npm', color: '#cb3736', value: '60' },
                     { name: 'ansible', color: '#2c8ebb', value: '60' },
                     { name: 'jenkinsx', color: '#8b57d9', value: '55' },
                     { name: 'kafka', color: '#dd0330', value: '55' },
+                    { name: 'istio', color: '#0784af', value: '50' },
+                    { name: 'knative', color: '#ff0000', value: '40' },
+                    { name: 'webpack', color: '#6dcdff', value: '30' }
+                ]
+            },
+            {
+                name: 'Databases',
+                list: [
+                    { name: 'oracle', color: '#ffcb2c', value: '75' },
+                    { name: 'postgres', color: '#18bbb0', value: '70' },
+                    { name: 'mongodb', color: '#6dcdff', value: '70' },
+                    { name: 'elasticsearch', color: '#cb3736', value: '65' },
+                    { name: 'mysql', color: '#0784af', value: '50' }
                 ]
             } 
         ]
