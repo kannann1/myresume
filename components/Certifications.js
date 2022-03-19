@@ -2,28 +2,28 @@ import React from 'react'
 import Title from './Title'
 
 class Certification extends React.Component {
-    render() {
-        let {time, side, color, children} = this.props
-        let lineColor = "#7f8c8d"
+  render () {
+    const { time, color, children } = this.props
+    const lineColor = '#7f8c8d'
 
-        return (
-            <div>
-              
-              <div className="columns timeline">
-                            <div className="circle is-hidden-mobile"></div>
-                            <div className="column left is-6 has-text-right">
-                                <div className="arrow arrow-right"></div>
-                                <div className="detail detail-left">
-                                    <p className="is-hidden-tablet">{time}</p>
-                                    {children}
-                                </div>
-                            </div>
-                            <div className="column is-6 has-text-left is-hidden-mobile">
-                                <div className="time">{time}</div>
-                            </div>
-                        </div>
-                    
-                <style jsx>{`
+    return (
+      <div>
+
+        <div className='columns timeline'>
+          <div className='circle is-hidden-mobile' />
+          <div className='column left is-6 has-text-right'>
+            <div className='arrow arrow-right' />
+            <div className='detail detail-left'>
+              <p className='is-hidden-tablet'>{time}</p>
+              {children}
+            </div>
+          </div>
+          <div className='column is-6 has-text-left is-hidden-mobile'>
+            <div className='time'>{time}</div>
+          </div>
+        </div>
+
+        <style jsx>{`
                     .timeline {
                         position: relative;
                     }
@@ -98,57 +98,59 @@ class Certification extends React.Component {
 .legend .awesome { background-color: #00ffff; }
 .legend .kindaawesome { background-color: #0000ff; }
 .legend .notawesome { background-color: #000000; }
-                `}</style>
-            </div>
-        )
-    }
+                `}
+        </style>
+      </div>
+    )
+  }
 }
 
 export default class Certifications extends React.Component {
-    render() {
-        let lineColor = "#7f8c8d"
-        return (
-            <section className="hero wrapper has-text-centered">  
-                            <Title title="Certifications" color='#2c3e50'/>
-         
-             <div className="container">
-             <Certification time="August 12, 2020" color="#228B22">
-                    <h4 style={{'color': '#228B22'}}>Oracle Cloud Infrastructure 2019 Certified Architect Professional</h4>
-        </Certification>
-        <Certification time="August 08, 2018" color="#228B22">
-                    <h4 style={{'color': '#228B22'}}>AWS Certified Solutions Architect – Associate</h4>
-        </Certification>
-             <Certification time="August 01, 2018" color="#e67e22">
-                    <h4 style={{'color': '#e67e22'}}>Certified Scrum Master - CSM</h4>
-        </Certification>
-             <Certification time="August 17, 2017" color="#228B22">
-                    <h4 style={{'color': '#228B22'}}>IBM Certified Application Developer - Cloud Platform V2</h4>
-        </Certification>
-             <Certification time="May 30, 2015" color="#9b59b6">
-                    <h4 style={{'color': '#9b59b6'}}>Oracle Communications Billing and Revenue Management 7 Advanced Certified Implementation Specialist</h4>
-        </Certification>
-        <Certification time="April 29, 2014" color="#3498db">
-                    <h4 style={{'color': '#3498db'}}>Oracle Certified Associate, Java SE 7 Programmer</h4>
-        </Certification>
-        <Certification time="March 02, 2013" color="#3498db">
-                    <h4 style={{'color': '#3498db'}}>Microsoft Certified Professional Programming in HTML5 with JavaScript and CSS3</h4>
-        </Certification>
+  render () {
+    return (
+      <section className='hero wrapper has-text-centered'>
+        <Title title='Certifications' color='#2c3e50' />
+
+        <div className='container'>
+          <Certification time='August 12, 2020' color='#228B22'>
+            <h4 style={{ color: '#228B22' }}>Oracle Cloud Infrastructure 2019 Certified Architect Professional</h4>
+          </Certification>
+          <Certification time='August 08, 2018' color='#228B22'>
+            <h4 style={{ color: '#228B22' }}>AWS Certified Solutions Architect – Associate</h4>
+          </Certification>
+          <Certification time='August 01, 2018' color='#e67e22'>
+            <h4 style={{ color: '#e67e22' }}>Certified Scrum Master - CSM</h4>
+          </Certification>
+          <Certification time='August 17, 2017' color='#228B22'>
+            <h4 style={{ color: '#228B22' }}>IBM Certified Application Developer - Cloud Platform V2</h4>
+          </Certification>
+          <Certification time='May 30, 2015' color='#9b59b6'>
+            <h4 style={{ color: '#9b59b6' }}>Oracle Communications Billing and Revenue Management 7 Advanced Certified Implementation Specialist</h4>
+          </Certification>
+          <Certification time='April 29, 2014' color='#3498db'>
+            <h4 style={{ color: '#3498db' }}>Oracle Certified Associate, Java SE 7 Programmer</h4>
+          </Certification>
+          <Certification time='March 02, 2013' color='#3498db'>
+            <h4 style={{ color: '#3498db' }}>Microsoft Certified Professional Programming in HTML5 with JavaScript and CSS3</h4>
+          </Certification>
         </div>
-        <ul className="legend">
-    <li><span className="cloud"></span> Cloud Certs</li>
-    <li><span className="programming"></span> Programming Certs</li>
-    <li><span className="management"></span> Management Certs</li>
-    <li><span className="othersystems"></span> Other Certs</li>
-</ul><style jsx>{`
-                    .legend { list-style: none; }
-.legend li { float: left; margin-right: 10px; }
-.legend span { border: 1px solid #ccc; float: left; width: 12px; height: 12px; margin: 2px; }
-.legend .cloud { background-color: #228B22; }
-.legend .programming { background-color: #3498db; }
-.legend .management { background-color: #e67e22; }
-.legend .othersystems { background-color: #9b59b6; }
-                `}</style>
-        </section>
-)
-    }
+        <ul className='legend'>
+          <li><span className='cloud' /> Cloud Certs</li>
+          <li><span className='programming' /> Programming Certs</li>
+          <li><span className='management' /> Management Certs</li>
+          <li><span className='othersystems' /> Other Certs</li>
+        </ul>
+        <style jsx>{`
+            .legend { list-style: none; }
+            .legend li { float: left; margin-right: 10px; }
+            .legend span { border: 1px solid #ccc; float: left; width: 12px; height: 12px; margin: 2px; }
+            .legend .cloud { background-color: #228B22; }
+            .legend .programming { background-color: #3498db; }
+            .legend .management { background-color: #e67e22; }
+            .legend .othersystems { background-color: #9b59b6; }
+            `}
+        </style>
+      </section>
+    )
+  }
 }

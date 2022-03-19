@@ -1,16 +1,16 @@
-import Typist from 'react-typist';
+import Typist from 'react-typist'
 const cursor = {
-    element: '_',
-    hideWhenDone: true,
-    hideWhenDoneDelay: 0,
+  element: '_',
+  hideWhenDone: true,
+  hideWhenDoneDelay: 0
 }
 
-export default ({color}) => (
-    <div className="is-hidden-touch">
-        <Typist cursor={cursor}>
-            I'm <span>Kannan </span>
-        </Typist>
-        <style jsx>{`
+export default ({ color }) => (
+  <div className='is-hidden-touch'>
+    <Typist cursor={cursor}>
+      I'm <span>Kannan </span>
+    </Typist>
+    <style jsx>{`
             div {
                 color: ${color};
                 font-size: 8em;
@@ -24,6 +24,7 @@ export default ({color}) => (
                     display: none;
                 }
             }
-        `}</style>
-    </div> 
+        `}
+    </style>
+  </div>
 )
