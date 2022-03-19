@@ -12,6 +12,7 @@ export default class Skills extends React.Component {
                     {
                         items.map((item, key) => 
                             <Item key={key}
+                                name={item.name}
                                 img={'/static/images/skills/' + item.name + '.png'} 
                                 color={item.color} 
                                 value={item.value}/>

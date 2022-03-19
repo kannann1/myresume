@@ -57,7 +57,7 @@ export default class Skills extends React.Component {
                     { name: 'npm', color: '#cb3736', value: '60' },
                     { name: 'webpack', color: '#6dcdff', value: '30' },
                     { name: 'knative', color: '#ff0000', value: '40' },
-                    { name: 'istio', color: '#0784af', value: '45' },
+                    { name: 'istio', color: '#0784af', value: '50' },
                     { name: 'terraform', color: '#81ca2a', value: '65' },
                     { name: 'ansible', color: '#2c8ebb', value: '60' },
                     { name: 'jenkinsx', color: '#8b57d9', value: '55' },
