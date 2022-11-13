@@ -11,7 +11,7 @@ export default () => {
         { name: 'java', color: '#1e77b7', value: '80' },
         { name: 'spring', color: '#e74c3c', value: '80' },
         { name: 'quarkus', color: '#6dcdff', value: '75' },
-        { name: 'nodejs', color: '#81ca2a', value: '60' },
+        { name: 'nodejs', color: '#81ca2a', value: '70' },
         { name: 'kotlin', color: '#dd0330', value: '55' },
         { name: 'python', color: '#cb3736', value: '50' }
       ]
@@ -21,8 +21,8 @@ export default () => {
       list: [
         { name: 'aws', color: '#F05032', value: '70' },
         { name: 'ibmcloud', color: '#18bbb0', value: '70' },
-        { name: 'azure', color: '#cb3736', value: '50' },
-        { name: 'oci', color: '#6dcdff', value: '50' }
+        { name: 'azure', color: '#cb3736', value: '65' },
+        { name: 'oci', color: '#6dcdff', value: '65' }
       ]
     },
     {
@@ -46,10 +46,10 @@ export default () => {
         { name: 'terraform', color: '#81ca2a', value: '65' },
         { name: 'npm', color: '#cb3736', value: '60' },
         { name: 'ansible', color: '#2c8ebb', value: '60' },
+        { name: 'kafka', color: '#dd0330', value: '80' },
+        { name: 'istio', color: '#0784af', value: '70' },
+        { name: 'knative', color: '#ff0000', value: '60' },
         { name: 'jenkinsx', color: '#8b57d9', value: '55' },
-        { name: 'kafka', color: '#dd0330', value: '55' },
-        { name: 'istio', color: '#0784af', value: '50' },
-        { name: 'knative', color: '#ff0000', value: '40' },
         { name: 'webpack', color: '#6dcdff', value: '30' }
       ]
     },
