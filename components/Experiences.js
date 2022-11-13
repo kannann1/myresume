@@ -7,7 +7,19 @@ export default () => {
     <section className='hero wrapper has-text-centered'>
       <Title title='Experiences' color='#2c3e50' />
       <div className='container'>
-        <Timeline side='left' time='Sep 2020 - Now' color='#228B22'>
+      <Timeline side='right' time='May 2022 - Now' color='#228B22'>
+          <h4 style={{ color: '#228B22' }}>Blue Rose Technologies</h4>
+          <i className='position'>Senior Devops Consultant</i><br />
+          <ul style={{ textAlign: 'left', padding: '0', margin: '0', listStyleType: 'disc' }}>
+            <li>Responsible for CICD implementation for Oracle stack products and other custom implementations.</li>
+            <li>Build Jenkins pipelines for build and deployment.</li>
+            <li>Working on OEP application which is a Java based custom solution for middleware in Oracle Communication product stack</li>
+            <li>Responsible for securing communications using SSL across the platform.</li>
+            <li>Implement the monitoring system in Kubernetes cluster using Prometheus, Grafana, stack</li>
+            <li>Implement the logging system using EFK stack</li>
+          </ul>
+        </Timeline>
+        <Timeline side='left' time='Sep 2020 - May 2022' color='#228B22'>
           <h4 style={{ color: '#228B22' }}>property.xyz</h4>
           <i className='position'>Senior Software Engineer</i><br />
           <ul style={{ textAlign: 'left', padding: '0', margin: '0', listStyleType: 'circle' }}>
