@@ -7,8 +7,8 @@ export default () => {
     <section className='hero wrapper has-text-centered'>
       <Title title='Experiences' color='#2c3e50' />
       <div className='container'>
-      <Timeline side='right' time='May 2022 - Now' color='#228B22'>
-          <h4 style={{ color: '#228B22' }}>Blue Rose Technologies</h4>
+      <Timeline side='right' time='May 2022 - Now' color='#4d8B22'>
+          <h4 style={{ color: '#4d8B22' }}>Blue Rose Technologies</h4>
           <i className='position'>Senior Devops Consultant</i><br />
           <ul style={{ textAlign: 'left', padding: '0', margin: '0', listStyleType: 'disc' }}>
             <li>Responsible for CICD implementation for Oracle stack products and other custom implementations.</li>

@@ -4,7 +4,7 @@ export default () => {
   return (
     <div className='column profile'>
       <figure className='image' onClick={() => this.props.toggle()}>
-        <img src='/static/images/profile.png' />
+        <img src='/static/images/profile-2.png' />
       </figure>
       <style jsx>{`
                     .profile {
