@@ -8,9 +8,9 @@ export default () => {
         {
       name: 'Cloud',
       list: [
+        { name: 'azure', color: '#cb3736', value: '80' },
         { name: 'aws', color: '#F05032', value: '75' },
         { name: 'ibmcloud', color: '#18bbb0', value: '75' },
-        { name: 'azure', color: '#cb3736', value: '80' },
         { name: 'oci', color: '#6dcdff', value: '65' }
       ]
     },
@@ -19,9 +19,10 @@ export default () => {
       list: [
         { name: 'git', color: '#F05032', value: '80' },
         { name: 'maven', color: '#18bbb0', value: '80' },
-        { name: 'terraform', color: '#81ca2a', value: '65' },
+        { name: 'terraform', color: '#81ca2a', value: '80' },
         { name: 'npm', color: '#cb3736', value: '80' },
-        { name: 'ansible', color: '#2c8ebb', value: '60' },
+        { name: 'ansible', color: '#2c8ebb', value: '75' },
+        { name: 'argocd', color: "cb3736", value: '75' }
         { name: 'kafka', color: '#dd0330', value: '80' },
         { name: 'istio', color: '#0784af', value: '80' },
         { name: 'knative', color: '#ff0000', value: '75' },
@@ -59,7 +60,7 @@ export default () => {
         { name: 'oracle', color: '#ffcb2c', value: '75' },
         { name: 'postgres', color: '#18bbb0', value: '70' },
         { name: 'mongodb', color: '#6dcdff', value: '70' },
-        { name: 'elasticsearch', color: '#cb3736', value: '65' },
+        { name: 'elasticsearch', color: '#cb3736', value: '70' },
         { name: 'mysql', color: '#0784af', value: '50' }
       ]
     }
