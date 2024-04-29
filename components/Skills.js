@@ -22,7 +22,7 @@ export default () => {
         { name: 'terraform', color: '#81ca2a', value: '80' },
         { name: 'npm', color: '#cb3736', value: '80' },
         { name: 'ansible', color: '#2c8ebb', value: '75' },
-        { name: 'argocd', color: "cb3736", value: '75' }
+        { name: 'argocd', color: "cb3736", value: '75' },
         { name: 'kafka', color: '#dd0330', value: '80' },
         { name: 'istio', color: '#0784af', value: '80' },
         { name: 'knative', color: '#ff0000', value: '75' },
