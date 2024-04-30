@@ -108,6 +108,20 @@ const Certifications = () => {
       <Title title='Certifications' color='#2c3e50' />
 
       <div className='container'>
+        <Certification time='April 5, 2024' color='#228B22'>
+          <h4 style={{ color: '#228B22' }}>Microsoft Certified: Azure Solutions Architect Expert
+</h4>
+        </Certification>
+        <Certification time='April 5, 2024' color='#228B22'>
+          <h4 style={{ color: '#228B22' }}>Microsoft Certified: Azure Administrator Associate
+</h4>
+        </Certification>
+        <Certification time='March 15, 2024' color='#228B22'>
+          <h4 style={{ color: '#228B22' }}>Oracle Cloud Infrastructure 2023 AI Certified Foundations Associate</h4>
+        </Certification>
+        <Certification time='Febraury 29, 2024' color='#3498db'>
+          <h4 style={{ color: '#3498db' }}>Oracle Certified Professional: Java SE 17 Developer</h4>
+        </Certification>
         <Certification time='August 12, 2020' color='#228B22'>
           <h4 style={{ color: '#228B22' }}>Oracle Cloud Infrastructure 2019 Certified Architect Professional</h4>
         </Certification>
