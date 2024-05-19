@@ -7,7 +7,21 @@ export default () => {
     <section className='hero wrapper has-text-centered'>
       <Title title='Experiences' color='#2c3e50' />
       <div className='container'>
-      <Timeline side='right' time='May 2022 - Now' color='#4d8B22'>
+        <Timeline side='left' time='Sep 2020 - May 2022' color='#228B22'>
+          <h4 style={{ color: '#18228B' }}>Oracle India</h4>
+          <i className='position'>Senior Principal Consultant</i><br />
+          <ul style={{ textAlign: 'left', padding: '0', margin: '0', listStyleType: 'circle' }}>
+            <li>Act as a technical reference for process planning, training, change control, version control and configuration management.</li>
+            <li>Manage virtual instance using Ansible</li>
+            <li>Design and architect complete backup, HA(High Availability) and DR(Disaster Recovery) setup.</li>
+            <li>Setup observability stack for cloud native and on-premise applications using Prometheus, Grafana, Alertmanager and EFK (Elasticsearch, Kibana and Fluentd).</li>
+            <li>Automate every possible activity to avoid manual intervention.</li>
+            <li>Manage 12 member Technical Architecture team</li>
+            <li>Architect and setup Openshift cluster of 3 master node and 16 worker nodes.</li>
+            <li>Orchestrate CICD using Jenkins, Helm and Ansible</li>
+          </ul>
+        </Timeline>
+      <Timeline side='right' time='May 2022 - Now' color='#ab8B10'>
           <h4 style={{ color: '#4d8B22' }}>Blue Rose Technologies</h4>
           <i className='position'>Senior Devops Consultant</i><br />
           <ul style={{ textAlign: 'left', padding: '0', margin: '0', listStyleType: 'disc' }}>
