@@ -59,6 +59,9 @@ export default class Header extends React.Component {
                 <Button title='Credentials' url='https://www.credly.com/users/kannann1' />
               </div>
               <div className='column'>
+                <Button title='Medium' url='https://medium.com/@Kannan91' />
+              </div>
+              <div className='column'>
                 <Button title='GitHub' url='https://github.com/kannann1' />
               </div>
             </div>
