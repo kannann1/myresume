@@ -108,6 +108,10 @@ const Certifications = () => {
       <Title title='Certifications' color='#2c3e50' />
 
       <div className='container'>
+        <Certification time='August 2, 2024' color='#228B22'>
+          <h4 style={{ color: '#228B22' }}>Certified Kubernetes Adminstrator
+</h4>
+        </Certification>
         <Certification time='April 5, 2024' color='#228B22'>
           <h4 style={{ color: '#228B22' }}>Microsoft Certified: Azure Solutions Architect Expert
 </h4>
