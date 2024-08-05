@@ -49,7 +49,7 @@ export default class Header extends React.Component {
             </div>
             <div className='columns'>
               <div className='column'>
-                <Button title='Resume' url='https://1drv.ms/b/s!ArpXJqhZiDCeiFNKrTJiFjuP01Gz?e=XQgaI3' />
+                <Button title='Resume' url='https://1drv.ms/b/s!ArpXJqhZiDCeiFYJSLjpETvjmO2D?e=uVQewO' />
 
               </div>
               <div className='column'>
