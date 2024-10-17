@@ -112,7 +112,6 @@ const Certifications = () => {
           <h4 style={{ color: '#228B22' }}>Kubestronaut
 </h4>
         </Certification>
-  </div>
         <Certification time='October 13, 2024' color='#228B22'>
           <h4 style={{ color: '#228B22' }}>Kubernetes and Cloud Native Security Associate (KCSA)
 </h4>
