@@ -23,7 +23,7 @@ export default () => {
       </div>
       <div className='columns'>
         <div className='column detail is-10 is-offset-1 is-6-desktop is-offset-3-desktop is-10-mobile is-offset-1-mobile'>
-          Adaptable Senior Software Engineer talented at providing customized and optimized solutions for all needs. Thrives within tight deadlines by applying agile development strategies. Comfortable overseeing large-scale development teams or independently coding complex projects.
+          Kubestronaut(CKAD+CKA+KCNA+KCSA+CKS). Adaptable Senior Software Engineer talented at providing customized and optimized solutions for all needs. Thrives within tight deadlines by applying agile development strategies. Comfortable overseeing large-scale development teams or independently coding complex projects.
         </div>
       </div>
       <Interersts />
