@@ -12,12 +12,9 @@ export default () => {
           <i className='position'>Senior Principal Consultant</i><br />
           <ul style={{ textAlign: 'left', padding: '0', margin: '0', listStyleType: 'circle' }}>
             <li>Act as a technical reference for process planning, training, change control, version control and configuration management.</li>
-            <li>Manage virtual instance using Ansible</li>
             <li>Design and architect complete backup, HA(High Availability) and DR(Disaster Recovery) setup.</li>
             <li>Setup observability stack for cloud native and on-premise applications using Prometheus, Grafana, Alertmanager and EFK (Elasticsearch, Kibana and Fluentd).</li>
             <li>Automate every possible activity to avoid manual intervention.</li>
-            <li>Manage 12 member Technical Architecture team</li>
-            <li>Architect and setup Openshift cluster of 3 master node and 16 worker nodes.</li>
             <li>Orchestrate CICD using Jenkins, Helm and Ansible</li>
           </ul>
         </Timeline>
@@ -29,7 +26,7 @@ export default () => {
             <li>Build Jenkins pipelines for build and deployment.</li>
             <li>Working on OEP application which is a Java based custom solution for middleware in Oracle Communication product stack</li>
             <li>Responsible for securing communications using SSL across the platform.</li>
-            <li>Implement the monitoring system in Kubernetes cluster using Prometheus, Grafana, stack</li>
+            <li>Implement the monitoring system in Kubernetes cluster using Prometheus, Grafana stack</li>
             <li>Implement the logging system using EFK stack</li>
           </ul>
         </Timeline>
