@@ -107,9 +107,37 @@ const Certifications = () => {
     <section className='hero wrapper has-text-centered'>
       <Title title='Certifications' color='#2c3e50' />
 
+    <div className='container'>
+        <Certification time='October 13, 2024' color='#228B22'>
+          <h4 style={{ color: '#228B22' }}>Kubestronaut
+</h4>
+        </Certification>
+        <Certification time='October 13, 2024' color='#228B22'>
+          <h4 style={{ color: '#228B22' }}>Kubernetes and Cloud Native Security Associate (KCSA)
+</h4>
+        </Certification>
+
+  <div className='container'>
+        <Certification time='October 10, 2024' color='#228B22'>
+          <h4 style={{ color: '#228B22' }}>Certified Kubernetes Security Specialist (CKS)
+</h4>
+        </Certification>
+
+  <div className='container'>
+        <Certification time='September 12, 2024' color='#228B22'>
+          <h4 style={{ color: '#228B22' }}>Kubernetes and Cloud Native Associate Exam (KCNA)
+</h4>
+        </Certification>
+
+  <div className='container'>
+        <Certification time='August 29, 2024' color='#228B22'>
+          <h4 style={{ color: '#228B22' }}>Certified Kubernetes Application Developer (CKAD)
+</h4>
+        </Certification>
+
       <div className='container'>
         <Certification time='August 2, 2024' color='#228B22'>
-          <h4 style={{ color: '#228B22' }}>Certified Kubernetes Adminstrator
+          <h4 style={{ color: '#228B22' }}>Certified Kubernetes Adminstrator (CKA)
 </h4>
         </Certification>
         <Certification time='April 5, 2024' color='#228B22'>
