@@ -2,6 +2,12 @@ const path = require('path')
 const glob = require('glob')
 
 module.exports = {
+  // Enable React strict mode for improved error handling
+  reactStrictMode: true,
+  // Disable server-side image optimization for better Netlify compatibility
+  images: {
+    unoptimized: true,
+  },
   webpack: (config, {
     dev
   }) => {
