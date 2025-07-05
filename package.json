@@ -38,10 +38,11 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-tsparticles": "^1.41.5",
-    "react-typist": "^1.1.1",
+    "react-typist-component": "^1.0.5",
     "webpack-bundle-analyzer": "^4.5.0"
   },
   "devDependencies": {
-    "standard": "^16.0.4"
+    "standard": "^16.0.4",
+    "@netlify/plugin-nextjs": "^4.41.3"
   }
 }

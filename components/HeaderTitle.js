@@ -1,13 +1,8 @@
-import Typist from 'react-typist'
-const cursor = {
-  element: '_',
-  hideWhenDone: true,
-  hideWhenDoneDelay: 0
-}
+import { Typist } from 'react-typist-component'
 
 export default ({ color }) => (
   <div className='is-hidden-touch'>
-    <Typist cursor={cursor}>
+    <Typist cursor={{ element: '_', hideWhenDone: true, hideWhenDoneDelay: 0 }}>
       I'm <span>Kannan </span>
     </Typist>
     <style jsx>{`
