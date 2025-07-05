@@ -1,5 +1,5 @@
 import React from 'react'
-import Particles from 'react-particles-js'
+import Particles from 'react-tsparticles'
 
 export default class HeaderBackground extends React.Component {
   constructor () {
@@ -38,7 +38,7 @@ export default class HeaderBackground extends React.Component {
     } else {
       return (
         <Particles
-          params={{
+          options={{
             particles: {
               number: {
                 value: 50

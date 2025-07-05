@@ -6,46 +6,33 @@ import Education from './../components/Education'
 import Skills from './../components/Skills'
 import Certifications from './../components/Certifications'
 
-export default class Index extends React.Component {
-  constructor () {
-    super()
-    this.state = {
-      mounted: false
-    }
-  }
-
-  componentDidMount () {
-    this.setState({ mounted: true })
-  }
-
-  render () {
-    if (this.state.mounted) {
-      return (
-        <main>
-          <Header />
-          <About />
-          <Experiences />
-          <Education />
-          <Skills />
-          <Certifications />
-          <style jsx global>{`
-                        body {
-                            font-family: 'Questrial', sans-serif;
-                        }
-                    `}
-          </style>
-        </main>
-      )
-    } else {
-      return (
-        <section className='hero is-light is-fullheight has-text-centered'>
-          <div className='hero-body'>
-            <div className='container'>
-              <h1 className='title'>Loading...</h1>
-            </div>
-          </div>
-        </section>
-      )
-    }
-  }
+const Index = ({ serverData }) => {
+  return (
+    <main>
+      <Header />
+      <About />
+      <Experiences />
+      <Education />
+      <Skills />
+      <Certifications />
+      <style jsx global>{`
+        body {
+          font-family: 'Questrial', sans-serif;
+        }
+      `}</style>
+    </main>
+  )
 }
+
+// This gets called on every request
+export async function getServerSideProps() {
+  // You can fetch data here that you want to pass to the page
+  const serverData = {
+    lastRendered: new Date().toISOString()
+  }
+
+  // Pass data to the page via props
+  return { props: { serverData } }
+}
+
+export default Index
