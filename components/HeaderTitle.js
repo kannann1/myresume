@@ -1,10 +1,10 @@
-import { Typist } from 'react-typist-component'
+import React from 'react'
 
 export default ({ color }) => (
   <div className='is-hidden-touch'>
-    <Typist cursor={{ element: '_', hideWhenDone: true, hideWhenDoneDelay: 0 }}>
-      I'm <span>Kannan </span>
-    </Typist>
+    <div className="typing-text">
+      I'm <span>Kannan </span><span className="cursor">_</span>
+    </div>
     <style jsx>{`
             div {
                 color: ${color};
@@ -13,6 +13,14 @@ export default ({ color }) => (
             }
             span {
                 color: #c0392b;
+            }
+            .cursor {
+                color: ${color};
+                animation: blink 1s step-end infinite;
+            }
+            @keyframes blink {
+                from, to { opacity: 1; }
+                50% { opacity: 0; }
             }
             @media screen and ( max-height: 690px ) {
                 div {
