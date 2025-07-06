@@ -8,6 +8,8 @@ module.exports = {
   images: {
     unoptimized: true,
   },
+  // Set the output option to support Netlify SSR
+  output: "standalone",
   webpack: (config, {
     dev
   }) => {
