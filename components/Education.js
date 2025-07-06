@@ -4,7 +4,7 @@ import Item from './EducationItem'
 
 export default () => {
   return (
-    <section className='hero wrapper has-text-centered'>
+    <section id='education' className='hero wrapper has-text-centered'>
       <Title title='Education' color='#ffffff' />
       <div className='container'>
         <Item

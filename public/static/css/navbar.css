@@ -1,0 +1,49 @@
+/* Navbar styles */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 60px; /* Ensures anchors don't get hidden under the navbar */
+}
+
+body {
+  padding-top: 52px; /* Height of the navbar */
+}
+
+/* Reset padding for the header section */
+#header {
+  margin-top: -52px;
+}
+
+.navbar.is-fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.navbar.is-active {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-item.is-active {
+  background-color: #f5f5f5;
+  color: #3273dc;
+  font-weight: bold;
+}
+
+/* Add some padding to sections to improve scrolling experience */
+section {
+  scroll-margin-top: 60px;
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 768px) {
+  .navbar-menu.is-active {
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+}

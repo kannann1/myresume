@@ -41,47 +41,51 @@ export default class HeaderBackground extends React.Component {
           options={{
             particles: {
               number: {
-                value: 50
+                value: 15 // Reduced from 50
               },
               shape: {
-                type: 'triangle'
+                type: 'circle' // Changed from triangle to circle
               },
               color: {
-                value: ['#1abc9c', '#3498db', '#9b59b6', '#f1c40f', '#e74c3c']
+                value: ['#3498db', '#e0e0e0'] // Reduced color palette
               },
               line_linked: {
+                enable: false, // Disabled lines between particles
                 color: '#FFF',
                 width: 1,
                 shadow: {
-                  enable: true,
+                  enable: false, // Disabled shadows
                   color: '#333333',
                   blur: 5
                 }
               },
               size: {
-                value: 15,
+                value: 5, // Reduced size from 15
                 random: true
+              },
+              opacity: {
+                value: 0.3, // Added transparency
+                random: true,
+                anim: {
+                  enable: true,
+                  speed: 0.5
+                }
+              },
+              move: {
+                speed: 1 // Slower movement
               }
             },
             interactivity: {
               detect_on: 'window',
               events: {
                 onhover: {
-                  enable: true,
-                  mode: 'bubble'
+                  enable: false // Disabled hover effects
                 }
               },
               modes: {
                 repulse: {
-                  distance: 200,
-                  duration: 0.4
-                },
-                bubble: {
-                  distance: 200,
-                  size: 20,
-                  duration: 2,
-                  opacity: 8,
-                  speed: 3
+                  distance: 100,
+                  duration: 0.2
                 }
               }
             },
