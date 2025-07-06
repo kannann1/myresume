@@ -1,6 +1,6 @@
 [build]
   command = "npm run build"
-  publish = "out"
+  publish = "/opt/build/repo/out"
 
 [build.environment]
   NODE_VERSION = "22"
