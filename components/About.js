@@ -24,24 +24,24 @@ export default () => {
       <div className='columns'>
         <div className='column detail is-10 is-offset-1 is-8-desktop is-offset-2-desktop is-10-mobile is-offset-1-mobile'>
           <p className='about-intro'>
-            I'm a Lead DevOps & Cloud Engineer with 10+ years of hands-on experience architecting and operating high-scale infrastructure and developer platforms. A certified CKA & CKAD, I bring a strong automation-first mindset to everything I do:
+            <strong>Platform-first DevOps leader with hands-on Kubernetes expertise and <span className="highlight-text">11+ years</span> of experience</strong> architecting and operating high-scale infrastructure and developer platforms. A certified CKA & CKAD, I bring a strong automation-first mindset to everything I do:
           </p>
           
           <div className='about-highlights'>
             <p className='highlight'>
-            <span className='highlight-icon'>✅</span> <strong>Drive systemic impact:</strong> Led CI/CD and reliability initiatives that accelerated deployment speeds by 60%, improved system uptime above 99.9%, and cut incident response time by 40%.
+              <strong>Drive systemic impact:</strong> Led CI/CD and reliability initiatives that accelerated deployment speeds by <span className="highlight-text">60%</span>, improved system uptime above <span className="highlight-text">99.9%</span>, and cut incident response time by <span className="highlight-text">40%</span>.
             </p>
             
             <p className='highlight'>
-            <span className='highlight-icon'>⚙️</span> <strong>Deep technical expertise:</strong> Proficient in Kubernetes, Terraform, ArgoCD, Prometheus, and GitOps. Designed and maintained platforms supporting 10M+ users, delivering robust, scalable, and secure infrastructure.
+              <strong>Deep technical expertise:</strong> Proficient in <span className="highlight-text">Kubernetes</span>, <span className="highlight-text">Terraform</span>, <span className="highlight-text">ArgoCD</span>, Prometheus, and GitOps. Designed and maintained platforms supporting millions of users, delivering robust, scalable, and secure infrastructure.
             </p>
             
             <p className='highlight'>
-            <span className='highlight-icon'>🤝</span> <strong>Collaborative leadership:</strong> Partnered across engineering and product teams to drive alignment on platform goals. Mentored 15+ engineers, established best practices around code reviews, documentation, and onboarding processes.
+              <strong>Collaborative leadership:</strong> Partnered across engineering and product teams to drive alignment on platform goals. Mentored <span className="highlight-text">15+</span> engineers, established best practices around code reviews, documentation, and onboarding processes.
             </p>
             
             <p className='highlight'>
-            <span className='highlight-icon'>💬</span> <strong>Passionate communicator:</strong> Regularly deliver talks, write technical articles, and lead workshops to share knowledge and promote DevOps culture and continuous learning within organizations.
+              <strong>Passionate communicator:</strong> Regularly deliver talks, write technical articles, and lead workshops to share knowledge and promote DevOps culture and continuous learning within organizations.
             </p>
           </div>
           
@@ -68,31 +68,23 @@ export default () => {
                     }
                     .mascot {
                         margin-left: 20px;
-                        width: 180px;
+                        width: 150px;
                     }
                     .detail {
-                        font-size: 0.95em;
-                        text-align: left;
-                    }
-                    .detail > b {
-                        color: #F1A9A0;
-                    }
-                    .detail > i {
-                        color: #00E640;
-                    }
-                    .about-intro {
-                        margin-bottom: 1.5rem;
-                        font-size: 1.1em;
+                        font-size: 0.9em;
                         line-height: 1.6;
                     }
+                    .about-intro, .about-conclusion {
+                        margin-bottom: 1.8rem;
+                    }
                     .about-highlights {
-                        padding: 0.5rem 0;
-                        margin-bottom: 1.5rem;
+                        margin-bottom: 1.8rem;
                     }
                     .highlight {
-                        margin-bottom: 1rem;
-                        line-height: 1.5;
-                        text-align: left;
+                        margin-bottom: 1.2rem;
+                        position: relative;
+                        padding-left: 1rem;
+                        border-left: 3px solid #3498db;
                     }
                     .highlight strong {
                         color: #ffcc00;

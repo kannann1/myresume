@@ -1,9 +1,29 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Title from './Title'
-import circle from './../static/css/circle.css'
 
-export default () => {
+const Skills = () => {
   const [activeTab, setActiveTab] = useState('technical')
+  const [animateSkills, setAnimateSkills] = useState(false)
+
+  // Add animation effect when skills section comes into view
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setAnimateSkills(true)
+          observer.disconnect()
+        }
+      },
+      { threshold: 0.2 }
+    )
+    
+    const skillsSection = document.getElementById('skills')
+    if (skillsSection) observer.observe(skillsSection)
+    
+    return () => {
+      if (skillsSection) observer.disconnect()
+    }
+  }, [])
 
   // Technical skills with proficiency levels and thematic groups
   const technicalSkills = [
@@ -126,42 +146,67 @@ export default () => {
     { level: 'Basic', description: 'Fundamental understanding with limited practical experience', color: '#6c757d' }
   ]
 
-  // Render a technical skill item with circular progress indicator
+  // Render a technical skill item with icon and progress bar
   const TechnicalSkillItem = ({ skill }) => {
     return (
       <div className="column is-3-desktop is-4-tablet is-6-mobile has-text-center skill-item">
-        <div className="skill-circle-container">
-          <div className={`circle c100 p${skill.value} dark big orange`}>
-            <span>
-              {skill.icon ? (
-                <i className={skill.icon} style={{ color: skill.iconColor || skill.color, fontSize: '30px', marginTop: '30px' }}></i>
-              ) : (
-                <img src={`/static/images/skills/${skill.name}.png`} alt={skill.label} />
-              )}
-            </span>
-            <div className="slice">
-              <div className="bar" style={{borderColor: skill.color}} />
-              <div className="fill" style={{borderColor: skill.color}} />
-            </div>
+        <div className={`skill-card ${animateSkills ? 'animate' : ''}`}>
+          <div className="skill-icon">
+            <i className={skill.icon} style={{ color: skill.iconColor || skill.color }}></i>
           </div>
-          <div className="skill-tooltip">
-            <strong>{skill.label}</strong><br />
-            Proficiency: {parseInt(skill.value)/10}/10<br />
-            Level: <span style={{color: getProficiencyColor(skill.level)}}>{skill.level}</span>
+          <div className="skill-info">
+            <p className="skill-name">{skill.label}</p>
+            <div className="skill-bar">
+              <div 
+                className="skill-progress" 
+                style={{
+                  width: animateSkills ? `${skill.value}%` : '0%', 
+                  backgroundColor: skill.color,
+                  transition: `width 1s ease-in-out ${Math.random() * 0.5}s`
+                }}
+              ></div>
+            </div>
+            <span className="skill-level" style={{color: getProficiencyColor(skill.level)}}>{skill.level}</span>
           </div>
         </div>
-        <p className="skill-name">{skill.label}</p>
-        <span className="skill-level" style={{backgroundColor: getProficiencyColor(skill.level)}}>{skill.level}</span>
       </div>
     )
   }
 
-  // Render a soft skill item
+  // Render a soft skill item with icon
   const SoftSkillItem = ({ skill }) => {
+    // Map skill categories to appropriate icons
+    const getSkillIcon = (name) => {
+      const iconMap = {
+        'Team Leadership': 'fas fa-users-cog',
+        'Project Management': 'fas fa-tasks',
+        'Strategic Planning': 'fas fa-chess',
+        'Mentoring': 'fas fa-chalkboard-teacher',
+        'Technical Communication': 'fas fa-comment-dots',
+        'Documentation': 'fas fa-file-alt',
+        'Cross-functional Collaboration': 'fas fa-people-arrows',
+        'Client Interaction': 'fas fa-handshake',
+        'Critical Thinking': 'fas fa-brain',
+        'Innovation': 'fas fa-lightbulb',
+        'Troubleshooting': 'fas fa-tools',
+        'Architecture Design': 'fas fa-drafting-compass',
+        'Adaptability': 'fas fa-sync-alt',
+        'Time Management': 'fas fa-clock',
+        'Attention to Detail': 'fas fa-search',
+        'Continuous Learning': 'fas fa-graduation-cap'
+      }
+      return iconMap[name] || 'fas fa-star'
+    }
+    
     return (
-      <div className="soft-skill-item">
-        <h4 className="soft-skill-name">{skill.name}</h4>
-        <p className="soft-skill-description">{skill.description}</p>
+      <div className={`soft-skill-item ${animateSkills ? 'animate' : ''}`}>
+        <div className="soft-skill-icon">
+          <i className={getSkillIcon(skill.name)}></i>
+        </div>
+        <div className="soft-skill-content">
+          <h4 className="soft-skill-name">{skill.name}</h4>
+          <p className="soft-skill-description">{skill.description}</p>
+        </div>
       </div>
     )
   }
@@ -174,7 +219,6 @@ export default () => {
 
   return (
     <section id='skills' className='hero wrapper has-text-centered'>
-      <style dangerouslySetInnerHTML={{ __html: circle }} />
       <Title title='Skills' color='#ffffff' />
       
       {/* Tab navigation */}
@@ -207,7 +251,15 @@ export default () => {
           <div className="technical-skills-container">
             {technicalSkills.map((group, index) => (
               <div key={index} className="skill-group">
-                <h3 className="group-title">{group.name}</h3>
+                <h3 className="group-title">
+                  <i className={group.name.includes('Cloud') ? 'fas fa-cloud' : 
+                    group.name.includes('Backend') ? 'fas fa-server' : 
+                    group.name.includes('Frontend') ? 'fas fa-desktop' : 
+                    group.name.includes('Database') ? 'fas fa-database' : 
+                    'fas fa-tools'} 
+                  style={{marginRight: '10px'}}/>
+                  {group.name}
+                </h3>
                 <p className="group-description">{group.description}</p>
                 <div className="columns is-multiline is-mobile">
                   {group.skills.map((skill, skillIndex) => (
@@ -224,7 +276,14 @@ export default () => {
           <div className="soft-skills-container">
             {softSkills.map((group, index) => (
               <div key={index} className="soft-skill-group">
-                <h3 className="group-title">{group.name}</h3>
+                <h3 className="group-title">
+                  <i className={group.name.includes('Leadership') ? 'fas fa-user-tie' : 
+                    group.name.includes('Communication') ? 'fas fa-comments' : 
+                    group.name.includes('Problem') ? 'fas fa-lightbulb' : 
+                    'fas fa-user-check'} 
+                  style={{marginRight: '10px'}}/>
+                  {group.name}
+                </h3>
                 <div className="columns is-multiline">
                   {group.skills.map((skill, skillIndex) => (
                     <div key={skillIndex} className="column is-6-desktop is-12-tablet">
@@ -257,152 +316,175 @@ export default () => {
         .wrapper {
           padding-top: 50px;
           padding-bottom: 50px;
-          background: #2f353f;
-          background-size: cover;
+          background: #2c3e50;
           color: #ffffff;
-          font-size: 1.1em;
+          font-size: 1.3em;
         }
         .tabs {
           margin-bottom: 2rem;
         }
         .tabs a {
           color: #ffffff;
-          border-bottom-color: #4a4a4a;
         }
         .tabs li.is-active a {
-          color: #3273dc;
-          border-bottom-color: #3273dc;
-          background-color: rgba(255, 255, 255, 0.9);
+          color: #2c3e50;
+          border-bottom-color: #3498db;
         }
-        .tabs ul {
-          border-bottom-color: #4a4a4a;
+        .skill-group, .soft-skill-group {
+          margin-bottom: 3rem;
+          background: rgba(255, 255, 255, 0.05);
+          border-radius: 8px;
+          padding: 1.5rem;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s;
+        }
+        .skill-group:hover, .soft-skill-group:hover {
+          transform: translateY(-5px);
         }
         .group-title {
           font-size: 1.5rem;
-          font-weight: bold;
           margin-bottom: 0.5rem;
-          color: #ffffff;
-          border-bottom: 2px solid #3273dc;
-          display: inline-block;
-          padding-bottom: 0.25rem;
+          color: #3498db;
+          display: flex;
+          align-items: center;
+          border-bottom: 2px solid rgba(52, 152, 219, 0.3);
+          padding-bottom: 0.5rem;
         }
         .group-description {
           margin-bottom: 1.5rem;
-          color: #b5b5b5;
-          font-style: italic;
+          font-size: 1rem;
+          color: #bdc3c7;
         }
-        .skill-group {
-          margin-bottom: 3rem;
-        }
-        .skill-name {
-          margin-top: 0.5rem;
-          font-weight: bold;
-          color: #ffffff;
-        }
-        .skill-level {
-          font-size: 0.75rem;
-          padding: 0.25rem 0.5rem;
-          border-radius: 4px;
-          color: white;
-          display: inline-block;
-          margin-top: 0.25rem;
-        }
-        .skill-item {
-          margin-bottom: 2rem;
-        }
-        .soft-skill-group {
-          margin-bottom: 2rem;
-        }
-        .soft-skill-item {
-          background-color: rgba(255, 255, 255, 0.1);
+        .skill-card {
+          background: rgba(255, 255, 255, 0.1);
           border-radius: 8px;
           padding: 1rem;
           height: 100%;
-          transition: transform 0.3s ease, background-color 0.3s ease;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          transition: transform 0.3s, box-shadow 0.3s;
+          margin-bottom: 1rem;
+        }
+        .skill-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .skill-card.animate {
+          animation: fadeIn 0.5s ease-in-out;
+        }
+        .skill-icon {
+          font-size: 2.5rem;
+          margin-bottom: 0.75rem;
+          height: 60px;
+          width: 60px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          background: rgba(255, 255, 255, 0.05);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .skill-info {
+          width: 100%;
+        }
+        .skill-name {
+          margin-bottom: 0.5rem;
+          font-weight: bold;
+          font-size: 0.9rem;
+        }
+        .skill-bar {
+          height: 6px;
+          background: rgba(255, 255, 255, 0.2);
+          border-radius: 3px;
+          margin-bottom: 0.5rem;
+          overflow: hidden;
+        }
+        .skill-progress {
+          height: 100%;
+          border-radius: 3px;
+        }
+        .skill-level {
+          font-size: 0.7rem;
+          font-weight: 500;
+        }
+        .soft-skill-item {
+          background: rgba(255, 255, 255, 0.1);
+          padding: 1.5rem;
+          border-radius: 8px;
+          height: 100%;
+          display: flex;
+          align-items: flex-start;
+          transition: transform 0.3s;
         }
         .soft-skill-item:hover {
           transform: translateY(-5px);
-          background-color: rgba(255, 255, 255, 0.15);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .soft-skill-item.animate {
+          animation: fadeIn 0.5s ease-in-out;
+        }
+        .soft-skill-icon {
+          font-size: 1.5rem;
+          margin-right: 1rem;
+          color: #3498db;
+          min-width: 30px;
+          text-align: center;
+        }
+        .soft-skill-content {
+          flex: 1;
         }
         .soft-skill-name {
-          font-weight: bold;
-          color: #3273dc;
+          color: #3498db;
+          font-size: 1.2rem;
           margin-bottom: 0.5rem;
         }
         .soft-skill-description {
-          color: #e0e0e0;
           font-size: 0.9rem;
+          color: #ecf0f1;
         }
         .proficiency-container {
-          background-color: rgba(255, 255, 255, 0.1);
-          border-radius: 8px;
-          padding: 2rem;
           max-width: 800px;
           margin: 0 auto;
+          text-align: left;
+          background: rgba(255, 255, 255, 0.05);
+          border-radius: 8px;
+          padding: 1.5rem;
         }
         .proficiency-intro {
           margin-bottom: 1.5rem;
-          font-size: 1.1rem;
         }
         .proficiency-level {
+          margin-bottom: 1rem;
           display: flex;
           align-items: center;
-          margin-bottom: 1rem;
+          background: rgba(255, 255, 255, 0.1);
+          padding: 1rem;
+          border-radius: 8px;
+          transition: transform 0.3s;
+        }
+        .proficiency-level:hover {
+          transform: translateX(10px);
         }
         .level-badge {
-          padding: 0.25rem 0.75rem;
-          border-radius: 4px;
+          padding: 3px 10px;
+          border-radius: 10px;
           color: white;
-          font-weight: bold;
+          font-size: 0.8em;
           margin-right: 1rem;
-          min-width: 100px;
+          min-width: 80px;
           text-align: center;
         }
         .level-description {
-          color: #e0e0e0;
+          font-size: 0.9em;
         }
-        .skill-circle-container {
-          position: relative;
-          display: inline-block;
-        }
-        .skill-tooltip {
-          display: none;
-          width: 160px;
-          background-color: rgba(0, 0, 0, 0.8);
-          color: #fff;
-          text-align: center;
-          border-radius: 6px;
-          padding: 10px;
-          font-size: 14px;
-          position: absolute;
-          z-index: 100;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          opacity: 0;
-          transition: opacity 0.3s;
-        }
-        .skill-circle-container:hover .skill-tooltip {
-          display: block;
-          opacity: 1;
-        }
-        img {
-          margin-top: 30px;
-          max-width: 60px;
-          transition: transform 0.5s ease-in-out;
-        }
-        .circle:hover img {
-          transform: rotate(-720deg);
-        }
-        .circle {
-          margin: 10px auto;
-          transition: transform 0.5s ease-in-out;
-        }
-        .circle:hover {
-          transform: rotate(360deg) scale(1.2);
-          z-index: 999;
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
         }
       `}</style>
     </section>
   )
 }
+
+export default Skills

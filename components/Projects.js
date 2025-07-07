@@ -12,7 +12,15 @@ export default () => {
             <div className="project-link"><a href="https://github.com/Netcracker/qubership-envgene" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a></div>
           </div>
           <i className='role'>System Analyst – LLD Specialist & Contributor (Netcracker Team)</i>
-          <div className="tech-stack">Kubernetes · Java · CRDs · Terraform · Ansible · GitOps · Jenkins · Prometheus · GitHub Pages</div>
+          <div className="tech-stack">
+            <span className="tech-badge"><i className="fab fa-kubernetes"></i> Kubernetes</span>
+            <span className="tech-badge"><i className="fab fa-java"></i> Java</span>
+            <span className="tech-badge"><i className="fas fa-cubes"></i> CRDs</span>
+            <span className="tech-badge"><i className="fas fa-cogs"></i> Terraform</span>
+            <span className="tech-badge"><i className="fab fa-ansible"></i> Ansible</span>
+            <span className="tech-badge"><i className="fab fa-git-alt"></i> GitOps</span>
+            <span className="tech-badge"><i className="fab fa-jenkins"></i> Jenkins</span>
+          </div>
           <div className="project-description">
             <p>Served as the System Analyst responsible for crafting the Low-Level Design (LLD) of qubership‑envgene, Netcracker's open-source environment templating platform.</p>
             
@@ -22,6 +30,12 @@ export default () => {
               <li>Defined secure processes for secret handling, Git-based auditability, and version-controlled environment definitions to ensure consistency and compliance.</li>
               <li>Co-developed and maintained GitHub Pages documentation, including architecture diagrams, LLD diagrams, installation guides, and usage workflows for developer teams.</li>
             </ul>
+            
+            <div className="project-actions">
+              <a href="https://github.com/Netcracker/qubership-envgene" target="_blank" rel="noopener noreferrer" className="project-action-button">
+                <i className="fab fa-github"></i> View on GitHub
+              </a>
+            </div>
           </div>
         </div>
 
@@ -31,7 +45,12 @@ export default () => {
             <div className="project-link"><a href="https://github.com/kannann1/microservice-bootstrap-operator" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a></div>
           </div>
           <i className='role'>Architect & Sole Developer</i>
-          <div className="tech-stack">Java · Kubernetes Operator SDK · CRDs · GitHub Pages documentation</div>
+          <div className="tech-stack">
+            <span className="tech-badge"><i className="fab fa-java"></i> Java</span>
+            <span className="tech-badge"><i className="fab fa-kubernetes"></i> Kubernetes</span>
+            <span className="tech-badge"><i className="fas fa-cubes"></i> CRDs</span>
+            <span className="tech-badge"><i className="fas fa-book"></i> GitHub Pages</span>
+          </div>
           <div className="project-description">
             <p>Sole architect and developer of a Java-based Kubernetes Operator designed to auto-generate microservice scaffolding—including custom resource definitions (CRDs), Deployments, Services, and ConfigMaps—via a single custom resource.</p>
             
@@ -41,6 +60,12 @@ export default () => {
               <li>Created comprehensive GitHub Pages documentation, featuring architectural diagrams, CRD examples, installation instructions, and usage guides to improve developer adoption and support.</li>
               <li>Demonstrates full ownership of platform tool development, end-to-end architecture, coding, and documentation, showcasing deep Kubernetes-native and Java platform engineering skills.</li>
             </ul>
+            
+            <div className="project-actions">
+              <a href="https://github.com/kannann1/microservice-bootstrap-operator" target="_blank" rel="noopener noreferrer" className="project-action-button">
+                <i className="fab fa-github"></i> View on GitHub
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -87,10 +112,24 @@ export default () => {
           margin-bottom: 5px;
         }
         .tech-stack {
-          font-size: 0.8em;
-          color: #555;
-          margin: 8px 0;
-          display: inline-block;
+          margin: 12px 0;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+        }
+        .tech-badge {
+          display: inline-flex;
+          align-items: center;
+          background-color: #f0f0f0;
+          color: #333;
+          padding: 4px 8px;
+          border-radius: 4px;
+          font-size: 0.75em;
+          font-weight: 500;
+        }
+        .tech-badge i {
+          margin-right: 4px;
+          color: #3498db;
         }
         .project-description p {
           font-size: 0.9em;
@@ -115,6 +154,30 @@ export default () => {
           position: absolute;
           left: 0;
           color: #666;
+        }
+        .project-actions {
+          margin-top: 16px;
+          display: flex;
+          gap: 12px;
+        }
+        .project-action-button {
+          display: inline-flex;
+          align-items: center;
+          background-color: #3498db;
+          color: white;
+          padding: 8px 16px;
+          border-radius: 4px;
+          font-size: 0.9em;
+          font-weight: 500;
+          text-decoration: none;
+          transition: all 0.2s ease;
+        }
+        .project-action-button:hover {
+          background-color: #2980b9;
+          transform: translateY(-2px);
+        }
+        .project-action-button i {
+          margin-right: 6px;
         }
       `}</style>
     </section>

@@ -38,18 +38,30 @@ export default class Header extends React.Component {
         <div className='hero-body'>
           <div className='container'>
             <div className='columns is-mobile'>
-              <Brace type='left' color={theme.font} />
+              <div className='column is-hidden-mobile tech-icon-left'>
+                <i className="fab fa-kubernetes fa-4x" style={{color: theme.font}}></i>
+                <i className="fab fa-aws fa-4x" style={{color: theme.font, marginTop: '30px'}}></i>
+              </div>
               <ProfileImage toggle={this.toggleTheme.bind(this)} />
-              <Brace type='right' color={theme.font} />
+              <div className='column is-hidden-mobile tech-icon-right'>
+                <i className="fab fa-docker fa-4x" style={{color: theme.font}}></i>
+                <i className="fas fa-cloud fa-4x" style={{color: theme.font, marginTop: '30px'}}></i>
+              </div>
             </div>
             <div className='columns'>
               <div className='column'>
                 <Title color={theme.font} />
               </div>
             </div>
-            <div className='columns is-centered'>
-              <div className='column is-2'>
+            <div className='columns is-centered cta-buttons'>
+              <div className='column is-narrow'>
                 <Button title='Download Resume' url='/static/resume/Kannan_Resume.pdf' icon='fas fa-file-pdf' download={true} />
+              </div>
+              <div className='column is-narrow'>
+                <Button title='GitHub Profile' url='https://github.com/kannann1' icon='fab fa-github' download={false} />
+              </div>
+              <div className='column is-narrow'>
+                <Button title='LinkedIn' url='https://www.linkedin.com/in/kannan91/' icon='fab fa-linkedin' download={false} />
               </div>
             </div>
             <div className='columns is-centered social-icons'>
@@ -78,6 +90,20 @@ export default class Header extends React.Component {
           <Background color={theme.background} />
         </div>
         <style jsx>{`
+          .tech-icon-left, .tech-icon-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 1.5s;
+          }
+          @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+          }
+          .cta-buttons {
+            margin-top: 1rem;
+          }
           .social-icons {
             margin-top: 1rem;
           }
