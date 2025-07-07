@@ -213,8 +213,20 @@ const Contact = () => {
           color: #ffffff;
           font-size: 1.3em;
         }
+        @media screen and (max-width: 768px) {
+          .wrapper {
+            padding-top: 30px;
+            font-size: 1.1em;
+          }
+        }
         .contact-info {
           padding: 2rem;
+        }
+        @media screen and (max-width: 768px) {
+          .contact-info {
+            padding: 1rem 0.5rem;
+            text-align: center;
+          }
         }
         .contact-details {
           margin: 2rem 0;
@@ -224,6 +236,12 @@ const Contact = () => {
           align-items: center;
           margin-bottom: 1rem;
         }
+        @media screen and (max-width: 768px) {
+          .contact-item {
+            justify-content: center;
+            margin-bottom: 0.8rem;
+          }
+        }
         .contact-item .icon {
           margin-right: 1rem;
           color: #3273dc;
@@ -232,6 +250,13 @@ const Contact = () => {
           margin: 2rem 0;
           display: flex;
           gap: 1.5rem;
+        }
+        @media screen and (max-width: 768px) {
+          .social-links {
+            margin: 1.5rem 0;
+            justify-content: center;
+            gap: 1.2rem;
+          }
         }
         .social-icon {
           display: flex;
@@ -254,6 +279,12 @@ const Contact = () => {
           padding: 2rem;
           box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
+        @media screen and (max-width: 768px) {
+          .contact-form-container {
+            padding: 1.5rem 1rem;
+            margin-top: 1rem;
+          }
+        }
         .contact-form .label {
           color: #ffffff;
         }
@@ -272,6 +303,12 @@ const Contact = () => {
           background-color: #2c3e50;
           padding: 1.5rem;
           margin-top: 3rem;
+        }
+        @media screen and (max-width: 768px) {
+          .footer {
+            padding: 1rem;
+            margin-top: 2rem;
+          }
         }
         .footer p {
           color: #bdc3c7;

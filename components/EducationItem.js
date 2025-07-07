@@ -42,6 +42,32 @@ export default ({ color, name, time, gpa, major }) => {
                         font-size: 1.8em;
                         color: #e74c3c;
                     }
+                    @media screen and (max-width: 768px) {
+                        .wrapper {
+                            padding-top: 10px;
+                            padding-bottom: 10px;
+                        }
+                        .item {
+                            box-shadow: 5px 5px 0px #333333;
+                            padding: 10px;
+                        }
+                        .school .name {
+                            font-size: 1.1em;
+                            margin-bottom: 5px;
+                        }
+                        .school p {
+                            font-size: 0.9em;
+                        }
+                        .school i {
+                            font-size: 0.85em;
+                        }
+                        .gpa h4 {
+                            font-size: 1.5em;
+                        }
+                        .gpa p {
+                            font-size: 0.9em;
+                        }
+                    }
                 `}
       </style>
     </div>

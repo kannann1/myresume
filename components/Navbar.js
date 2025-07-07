@@ -156,6 +156,43 @@ const Navbar = () => {
           color: #3273dc;
           font-weight: bold;
         }
+        .navbar-burger {
+          margin-left: auto;
+          height: 3.25rem;
+          width: 3.25rem;
+        }
+        .navbar-burger span {
+          height: 2px;
+          width: 20px;
+          left: calc(50% - 10px);
+          transition: all 0.3s ease-out;
+        }
+        .navbar-burger.is-active span:nth-child(1) {
+          transform: translateY(7px) rotate(45deg);
+        }
+        .navbar-burger.is-active span:nth-child(2) {
+          opacity: 0;
+        }
+        .navbar-burger.is-active span:nth-child(3) {
+          transform: translateY(-7px) rotate(-45deg);
+        }
+        .navbar-menu.is-active {
+          box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
+          max-height: calc(100vh - 3.25rem);
+          overflow-y: auto;
+        }
+        @media screen and (max-width: 1023px) {
+          .navbar-menu {
+            padding: 0.5rem 0;
+          }
+          .navbar-menu .navbar-item {
+            padding: 0.75rem 1.5rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+          }
+          .navbar-menu .navbar-item:last-child {
+            border-bottom: none;
+          }
+        }
         @keyframes slideDown {
           from {
             transform: translateY(-100%);

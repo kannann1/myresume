@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default () => {
+export default ({ toggle }) => {
   return (
     <div className='column profile'>
-      <figure className='image' onClick={() => this.props.toggle()}>
+      <figure className='image' onClick={toggle ? () => toggle() : undefined}>
         <img src='/static/images/profile-2.png' />
       </figure>
       <style jsx>{`

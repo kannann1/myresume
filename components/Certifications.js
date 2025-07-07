@@ -337,12 +337,25 @@ const Certifications = () => {
           color: #333333;
           font-size: 1.3em;
         }
+        @media screen and (max-width: 768px) {
+          .wrapper {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            font-size: 1.1em;
+          }
+        }
         .filters-container {
           margin-bottom: 2rem;
           padding: 1rem;
           background-color: #fff;
           border-radius: 8px;
           box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        @media screen and (max-width: 768px) {
+          .filters-container {
+            margin-bottom: 1.5rem;
+            padding: 0.8rem;
+          }
         }
         .filter-group {
           margin-bottom: 1rem;
@@ -357,6 +370,11 @@ const Certifications = () => {
           flex-wrap: wrap;
           gap: 0.5rem;
         }
+        @media screen and (max-width: 768px) {
+          .filter-options {
+            gap: 0.4rem;
+          }
+        }
         .filter-btn {
           padding: 0.3rem 0.8rem;
           background-color: #f1f1f1;
@@ -365,6 +383,12 @@ const Certifications = () => {
           font-size: 0.8rem;
           cursor: pointer;
           transition: all 0.2s ease;
+        }
+        @media screen and (max-width: 768px) {
+          .filter-btn {
+            padding: 0.3rem 0.6rem;
+            font-size: 0.75rem;
+          }
         }
         .filter-btn:hover {
           background-color: #e0e0e0;
@@ -465,7 +489,37 @@ const Certifications = () => {
         }
         @media screen and (max-width: 768px) {
           .certifications-grid {
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-template-columns: 1fr;
+            gap: 1rem;
+          }
+          .filter-title {
+            font-size: 0.9rem;
+          }
+          .certification-card {
+            margin-bottom: 15px;
+          }
+          .card-header {
+            padding: 12px;
+          }
+          .logo-container {
+            width: 50px;
+            height: 50px;
+          }
+          .card-content {
+            padding: 0.8rem;
+          }
+          .cert-title {
+            font-size: 0.95rem;
+          }
+          .issuer {
+            font-size: 0.85rem;
+            margin-bottom: 0.8rem;
+          }
+          .card-footer {
+            padding: 0.8rem;
+          }
+          .verify-link {
+            font-size: 0.85rem;
           }
         }
       `}</style>

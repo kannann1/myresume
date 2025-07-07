@@ -91,7 +91,7 @@ export default () => {
             <h4>IBM India</h4>
             <div className="company-link"><a href="https://www.ibm.com" target="_blank" rel="noopener noreferrer"><i className="fas fa-external-link-alt"></i></a></div>
           </div>
-          <i className='position'>Cloud Platform Engineer</i>
+          <i className='position'>Java Microservice Developer</i>
           <div className="tech-stack">IBM Cloud | Kubernetes | Istio | Spring Boot | Prometheus | Grafana</div>
           <ul className="achievement-list">
             <li>Built and maintained DevOps platform serving <span className="metric">500+</span> developers across India</li>
@@ -111,11 +111,23 @@ export default () => {
                         color: #333333;
                         font-size: 1.3em;
                     }
+                    @media screen and (max-width: 768px) {
+                        .wrapper {
+                            padding-top: 30px;
+                            padding-bottom: 30px;
+                            font-size: 1.1em;
+                        }
+                    }
                     h4 {
                         font-size: 1.2em;
                         font-weight: bold;
                         display: inline-block;
                         margin-right: 8px;
+                    }
+                    @media screen and (max-width: 768px) {
+                        h4 {
+                            font-size: 1.1em;
+                        }
                     }
                     p {
                         font-size: 0.8em;
@@ -125,6 +137,11 @@ export default () => {
                         font-weight: 500;
                         display: block;
                         margin-bottom: 5px;
+                    }
+                    @media screen and (max-width: 768px) {
+                        i.position {
+                            font-size: 0.9em;
+                        }
                     }
                     .company-header {
                         display: flex;
@@ -148,6 +165,15 @@ export default () => {
                         padding: 5px 10px;
                         display: inline-block;
                     }
+                    @media screen and (max-width: 768px) {
+                        .tech-stack {
+                            font-size: 0.75em;
+                            padding: 4px 8px;
+                            line-height: 1.4;
+                            width: 100%;
+                            box-sizing: border-box;
+                        }
+                    }
                     .achievement-list {
                         text-align: left;
                         padding: 0;
@@ -160,6 +186,13 @@ export default () => {
                         padding-left: 15px;
                         line-height: 1.4;
                     }
+                    @media screen and (max-width: 768px) {
+                        .achievement-list li {
+                            font-size: 0.85em;
+                            margin-bottom: 10px;
+                            line-height: 1.5;
+                        }
+                    }
                     .achievement-list li:before {
                         content: "▹";
                         position: absolute;
@@ -169,7 +202,7 @@ export default () => {
                     .metric {
                         color: #c0392b;
                         font-weight: 600;
-      }
+                    }
                 `}
       </style>
     </section>

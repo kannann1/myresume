@@ -99,11 +99,32 @@ export default ({ time, side, color, children }) => {
                         right: 14px;
                     }
                     @media screen and (max-width: 769px) {
-                        .timeline .left {
+                        .timeline .left, .timeline .right {
                             border-right: 0px;
-                        }
-                        .timeline .right {
                             border-left: 0px;
+                            transform: none;
+                        }
+                        .timeline .detail {
+                            margin: 0 0 20px;
+                            width: 100%;
+                            box-sizing: border-box;
+                        }
+                        .timeline .detail-left, .timeline .detail-right {
+                            border-left: 8px solid ${color};
+                            border-right: 0;
+                        }
+                        .timeline .time {
+                            margin: 0 0 10px;
+                            display: inline-block;
+                        }
+                        .arrow {
+                            display: none;
+                        }
+                        p.is-hidden-tablet {
+                            font-weight: bold;
+                            color: #c0392b;
+                            margin-bottom: 10px;
+                            font-size: 0.9em;
                         }
                     }
                 `}

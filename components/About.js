@@ -59,6 +59,13 @@ export default () => {
                         color: #ffffff;
                         font-size: 1.3em;
                     }
+                    @media screen and (max-width: 768px) {
+                        .wrapper {
+                            padding-top: 30px;
+                            padding-bottom: 30px;
+                            font-size: 1.1em;
+                        }
+                    }
                     dl > dt {
                         color: #ffcc00;
                         font-weight: bold;
@@ -66,13 +73,35 @@ export default () => {
                     dl > dd {
                         margin-bottom: 30px;
                     }
+                    @media screen and (max-width: 768px) {
+                        dl > dt {
+                            margin-top: 15px;
+                        }
+                        dl > dd {
+                            margin-bottom: 15px;
+                        }
+                    }
                     .mascot {
                         margin-left: 20px;
                         width: 150px;
                     }
+                    @media screen and (max-width: 768px) {
+                        .mascot {
+                            margin: 0 auto;
+                            width: 120px;
+                            display: block;
+                        }
+                    }
                     .detail {
                         font-size: 0.9em;
                         line-height: 1.6;
+                    }
+                    @media screen and (max-width: 768px) {
+                        .detail {
+                            font-size: 0.85em;
+                            line-height: 1.5;
+                            padding: 0 0.5rem;
+                        }
                     }
                     .about-intro, .about-conclusion {
                         margin-bottom: 1.8rem;
@@ -80,11 +109,23 @@ export default () => {
                     .about-highlights {
                         margin-bottom: 1.8rem;
                     }
+                    @media screen and (max-width: 768px) {
+                        .about-intro, .about-conclusion, .about-highlights {
+                            margin-bottom: 1.2rem;
+                        }
+                    }
                     .highlight {
                         margin-bottom: 1.2rem;
                         position: relative;
                         padding-left: 1rem;
                         border-left: 3px solid #3498db;
+                    }
+                    @media screen and (max-width: 768px) {
+                        .highlight {
+                            margin-bottom: 1rem;
+                            padding-left: 0.75rem;
+                            text-align: left;
+                        }
                     }
                     .highlight strong {
                         color: #ffcc00;
@@ -94,6 +135,12 @@ export default () => {
                         font-style: italic;
                         line-height: 1.6;
                         font-size: 1.05em;
+                    }
+                    @media screen and (max-width: 768px) {
+                        .about-conclusion {
+                            font-size: 0.95em;
+                            line-height: 1.5;
+                        }
                     }
                 `}
       </style>

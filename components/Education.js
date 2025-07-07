@@ -31,6 +31,13 @@ export default () => {
                         color: #333333;
                         font-size: 1.3em;
                     }
+                    @media screen and (max-width: 768px) {
+                        .wrapper {
+                            padding-top: 30px;
+                            padding-bottom: 30px;
+                            font-size: 1.1em;
+                        }
+                    }
                 `}
       </style>
     </section>

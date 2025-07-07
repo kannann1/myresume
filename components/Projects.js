@@ -78,6 +78,13 @@ export default () => {
           color: #333333;
           font-size: 1.3em;
         }
+        @media screen and (max-width: 768px) {
+          .wrapper {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            font-size: 1.1em;
+          }
+        }
         .project {
           margin-bottom: 40px;
           padding: 20px;
@@ -86,11 +93,22 @@ export default () => {
           background-color: #fff;
           box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
+        @media screen and (max-width: 768px) {
+          .project {
+            margin-bottom: 30px;
+            padding: 15px;
+          }
+        }
         h4 {
           font-size: 1.2em;
           font-weight: bold;
           display: inline-block;
           margin-right: 8px;
+        }
+        @media screen and (max-width: 768px) {
+          h4 {
+            font-size: 1.1em;
+          }
         }
         .project-header {
           display: flex;
@@ -111,11 +129,22 @@ export default () => {
           display: block;
           margin-bottom: 5px;
         }
+        @media screen and (max-width: 768px) {
+          i.role {
+            font-size: 0.9em;
+          }
+        }
         .tech-stack {
           margin: 12px 0;
           display: flex;
           flex-wrap: wrap;
           gap: 8px;
+        }
+        @media screen and (max-width: 768px) {
+          .tech-stack {
+            margin: 10px 0;
+            gap: 6px;
+          }
         }
         .tech-badge {
           display: inline-flex;
@@ -127,6 +156,12 @@ export default () => {
           font-size: 0.75em;
           font-weight: 500;
         }
+        @media screen and (max-width: 768px) {
+          .tech-badge {
+            padding: 3px 6px;
+            font-size: 0.7em;
+          }
+        }
         .tech-badge i {
           margin-right: 4px;
           color: #3498db;
@@ -135,6 +170,12 @@ export default () => {
           font-size: 0.9em;
           margin: 10px 0;
           line-height: 1.5;
+        }
+        @media screen and (max-width: 768px) {
+          .project-description p {
+            font-size: 0.85em;
+            margin: 8px 0;
+          }
         }
         .achievement-list {
           text-align: left;
@@ -149,6 +190,13 @@ export default () => {
           line-height: 1.4;
           font-size: 0.9em;
         }
+        @media screen and (max-width: 768px) {
+          .achievement-list li {
+            font-size: 0.8em;
+            margin-bottom: 10px;
+            line-height: 1.5;
+          }
+        }
         .achievement-list li:before {
           content: "•";
           position: absolute;
@@ -159,6 +207,13 @@ export default () => {
           margin-top: 16px;
           display: flex;
           gap: 12px;
+        }
+        @media screen and (max-width: 768px) {
+          .project-actions {
+            margin-top: 14px;
+            flex-direction: column;
+            gap: 10px;
+          }
         }
         .project-action-button {
           display: inline-flex;
@@ -171,6 +226,14 @@ export default () => {
           font-weight: 500;
           text-decoration: none;
           transition: all 0.2s ease;
+        }
+        @media screen and (max-width: 768px) {
+          .project-action-button {
+            padding: 10px 16px;
+            font-size: 0.85em;
+            justify-content: center;
+            width: 100%;
+          }
         }
         .project-action-button:hover {
           background-color: #2980b9;

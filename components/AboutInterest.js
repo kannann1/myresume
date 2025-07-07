@@ -29,6 +29,12 @@ export default () => {
                         color: #ffcc00;
                         font-size: 1.2em;
                     }
+                    @media screen and (max-width: 768px) {
+                        .topic {
+                            font-size: 1.1em;
+                            margin-top: 1rem;
+                        }
+                    }
                     .item img {
                         margin: 0 30px;
                         height: 80px;
@@ -36,6 +42,15 @@ export default () => {
                     }
                     .item img:hover {
                         transform: scale(1.5); 
+                    }
+                    @media screen and (max-width: 768px) {
+                        .item img {
+                            margin: 0 15px;
+                            height: 60px;
+                        }
+                        .item img:hover {
+                            transform: scale(1.3);
+                        }
                     }
                 `}
       </style>

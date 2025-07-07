@@ -320,8 +320,31 @@ const Skills = () => {
           color: #ffffff;
           font-size: 1.3em;
         }
+        @media screen and (max-width: 768px) {
+          .wrapper {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            font-size: 1.1em;
+          }
+        }
         .tabs {
           margin-bottom: 2rem;
+        }
+        @media screen and (max-width: 768px) {
+          .tabs {
+            margin-bottom: 1rem;
+          }
+          .tabs ul {
+            flex-wrap: wrap;
+            justify-content: center;
+          }
+          .tabs li {
+            flex-basis: 33.33%;
+          }
+          .tabs a {
+            padding: 0.5rem 0.25rem;
+            font-size: 0.8rem;
+          }
         }
         .tabs a {
           color: #ffffff;
@@ -373,6 +396,15 @@ const Skills = () => {
         .skill-card.animate {
           animation: fadeIn 0.5s ease-in-out;
         }
+        @media screen and (max-width: 768px) {
+          .skill-card {
+            padding: 0.75rem;
+            margin-bottom: 0.5rem;
+          }
+          .skill-item {
+            padding: 0.25rem;
+          }
+        }
         .skill-icon {
           font-size: 2.5rem;
           margin-bottom: 0.75rem;
@@ -384,6 +416,14 @@ const Skills = () => {
           border-radius: 50%;
           background: rgba(255, 255, 255, 0.05);
           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        @media screen and (max-width: 768px) {
+          .skill-icon {
+            font-size: 1.75rem;
+            height: 45px;
+            width: 45px;
+            margin-bottom: 0.5rem;
+          }
         }
         .skill-info {
           width: 100%;
@@ -424,12 +464,25 @@ const Skills = () => {
         .soft-skill-item.animate {
           animation: fadeIn 0.5s ease-in-out;
         }
+        @media screen and (max-width: 768px) {
+          .soft-skill-item {
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+          }
+        }
         .soft-skill-icon {
           font-size: 1.5rem;
           margin-right: 1rem;
           color: #3498db;
           min-width: 30px;
           text-align: center;
+        }
+        @media screen and (max-width: 768px) {
+          .soft-skill-icon {
+            font-size: 1.25rem;
+            margin-right: 0.75rem;
+            min-width: 24px;
+          }
         }
         .soft-skill-content {
           flex: 1;
@@ -443,6 +496,16 @@ const Skills = () => {
           font-size: 0.9rem;
           color: #ecf0f1;
         }
+        @media screen and (max-width: 768px) {
+          .soft-skill-name {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+          }
+          .soft-skill-description {
+            font-size: 0.8rem;
+            line-height: 1.4;
+          }
+        }
         .proficiency-container {
           max-width: 800px;
           margin: 0 auto;
@@ -451,20 +514,35 @@ const Skills = () => {
           border-radius: 8px;
           padding: 1.5rem;
         }
-        .proficiency-intro {
-          margin-bottom: 1.5rem;
+        @media screen and (max-width: 768px) {
+          .proficiency-container {
+            padding: 1rem;
+            margin: 0 0.5rem;
+          }
         }
         .proficiency-level {
-          margin-bottom: 1rem;
-          display: flex;
-          align-items: center;
-          background: rgba(255, 255, 255, 0.1);
-          padding: 1rem;
-          border-radius: 8px;
-          transition: transform 0.3s;
+          display: inline-block;
+          padding: 0.5rem 1rem;
+          border-radius: 4px;
+          margin: 0.5rem;
+          font-weight: 500;
         }
-        .proficiency-level:hover {
-          transform: translateX(10px);
+        @media screen and (max-width: 768px) {
+          .proficiency-level {
+            padding: 0.35rem 0.75rem;
+            margin: 0.25rem;
+            font-size: 0.8rem;
+          }
+        }
+        .proficiency-description {
+          margin-top: 0.5rem;
+          font-size: 0.9rem;
+        }
+        @media screen and (max-width: 768px) {
+          .proficiency-description {
+            font-size: 0.8rem;
+            line-height: 1.4;
+          }
         }
         .level-badge {
           padding: 3px 10px;

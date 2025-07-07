@@ -37,6 +37,23 @@ export default class Header extends React.Component {
       <header id='header' className='hero is-fullheight has-text-centered'>
         <div className='hero-body'>
           <div className='container'>
+            {/* Mobile tech icons - visible only on mobile */}
+            <div className='columns is-mobile is-hidden-tablet tech-icons-mobile'>
+              <div className='column is-3'>
+                <i className="fab fa-kubernetes fa-3x" style={{color: theme.font}}></i>
+              </div>
+              <div className='column is-3'>
+                <i className="fab fa-aws fa-3x" style={{color: theme.font}}></i>
+              </div>
+              <div className='column is-3'>
+                <i className="fab fa-docker fa-3x" style={{color: theme.font}}></i>
+              </div>
+              <div className='column is-3'>
+                <i className="fas fa-cloud fa-3x" style={{color: theme.font}}></i>
+              </div>
+            </div>
+            
+            {/* Desktop layout with profile image and tech icons */}
             <div className='columns is-mobile'>
               <div className='column is-hidden-mobile tech-icon-left'>
                 <i className="fab fa-kubernetes fa-4x" style={{color: theme.font}}></i>
@@ -48,23 +65,28 @@ export default class Header extends React.Component {
                 <i className="fas fa-cloud fa-4x" style={{color: theme.font, marginTop: '30px'}}></i>
               </div>
             </div>
+            
             <div className='columns'>
               <div className='column'>
                 <Title color={theme.font} />
               </div>
             </div>
-            <div className='columns is-centered cta-buttons'>
-              <div className='column is-narrow'>
+            
+            {/* Responsive CTA buttons */}
+            <div className='columns is-mobile is-multiline is-centered cta-buttons'>
+              <div className='column is-narrow-tablet is-12-mobile'>
                 <Button title='Download Resume' url='/static/resume/Kannan_Resume.pdf' icon='fas fa-file-pdf' download={true} />
               </div>
-              <div className='column is-narrow'>
-                <Button title='GitHub Profile' url='https://github.com/kannann1' icon='fab fa-github' download={false} />
+              <div className='column is-narrow-tablet is-6-mobile'>
+                <Button title='GitHub' url='https://github.com/kannann1' icon='fab fa-github' download={false} />
               </div>
-              <div className='column is-narrow'>
+              <div className='column is-narrow-tablet is-6-mobile'>
                 <Button title='LinkedIn' url='https://www.linkedin.com/in/kannan91/' icon='fab fa-linkedin' download={false} />
               </div>
             </div>
-            <div className='columns is-centered social-icons'>
+            
+            {/* Social icons - hidden on mobile as we have buttons above */}
+            <div className='columns is-centered social-icons is-hidden-mobile'>
               <div className='column is-narrow'>
                 <a href='https://www.linkedin.com/in/kannan91/' target='_blank' rel='noopener noreferrer' className='social-icon'>
                   <i className='fab fa-linkedin fa-2x'></i>
@@ -90,31 +112,55 @@ export default class Header extends React.Component {
           <Background color={theme.background} />
         </div>
         <style jsx>{`
+          .hero-body {
+            padding-bottom: 0;
+            padding-top: 1rem;
+          }
+          @media screen and (max-width: 768px) {
+            .hero-body {
+              padding: 1rem 0.5rem;
+            }
+          }
+          .social-icon {
+            margin: 0 0.5rem;
+            color: ${theme.font};
+            transition: all 0.5s;
+          }
+          .social-icon:hover {
+            color: #00d1b2;
+            transform: scale(1.1);
+          }
           .tech-icon-left, .tech-icon-right {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            animation: fadeIn 1.5s;
           }
-          @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+          .tech-icons-mobile {
+            margin-bottom: 1rem;
+          }
+          .tech-icons-mobile i {
+            transition: transform 0.3s ease;
+          }
+          .tech-icons-mobile i:hover {
+            transform: scale(1.2);
           }
           .cta-buttons {
-            margin-top: 1rem;
+            margin-top: 1.5rem;
+          }
+          @media screen and (max-width: 768px) {
+            .cta-buttons {
+              margin-top: 1rem;
+            }
+            .cta-buttons .column {
+              padding: 0.5rem;
+            }
           }
           .social-icons {
-            margin-top: 1rem;
+            margin-top: 1.5rem;
           }
-          .social-icon {
-            color: ${theme.font};
-            margin: 0 0.75rem;
-            transition: all 0.3s ease;
-          }
-          .social-icon:hover {
-            color: #c0392b;
-            transform: translateY(-3px);
+          .social-icons .column {
+            padding: 0.5rem;
           }
         `}</style>
       </header>
