@@ -24,7 +24,7 @@ export default () => {
       <div className='columns'>
         <div className='column detail is-10 is-offset-1 is-8-desktop is-offset-2-desktop is-10-mobile is-offset-1-mobile'>
           <p className='about-intro'>
-            <strong>Platform-first DevOps leader with hands-on Kubernetes expertise and <span className="highlight-text">11+ years</span> of experience</strong> architecting and operating high-scale infrastructure and developer platforms. A certified CKA & CKAD, I bring a strong automation-first mindset to everything I do:
+            <strong>Platform-first DevOps leader with hands-on Kubernetes expertise and <span className="highlight-text">12+ years</span> of experience</strong> architecting and operating high-scale infrastructure and developer platforms. A certified CKA & CKAD, I bring a strong automation-first mindset to everything I do:
           </p>
           
           <div className='about-highlights'>
