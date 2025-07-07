@@ -6,6 +6,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>Kannan's Profile</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Kannan's professional resume and portfolio" />
       </Head>
       <Component {...pageProps} />

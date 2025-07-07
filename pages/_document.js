@@ -7,8 +7,6 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <meta charSet="utf-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta name="description" content="Kannan's professional resume and portfolio" />
           <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
           <meta property="og:title" content="Kannan's Profile" />
           <meta property="og:description" content="Professional resume and portfolio for Kannan" />
@@ -18,7 +16,7 @@ export default class MyDocument extends Document {
           <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet" />
           <link rel='stylesheet' href='/static/css/bulma.css' />
           <link rel='stylesheet' href='/static/css/navbar.css' />
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossOrigin="anonymous" referrerPolicy="no-referrer" />
         </Head>
         <body>
           <Main />

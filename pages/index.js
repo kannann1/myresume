@@ -3,6 +3,7 @@ import Header from './../components/Header'
 import Navbar from './../components/Navbar'
 import About from './../components/About'
 import Experiences from './../components/Experiences'
+import Projects from './../components/Projects'
 import Education from './../components/Education'
 import Skills from './../components/Skills'
 import Certifications from './../components/Certifications'
@@ -24,6 +25,7 @@ const Index = () => {
       `}</style>
       <About />
       <Experiences />
+      <Projects />
       <Education />
       <Skills />
       <Certifications />

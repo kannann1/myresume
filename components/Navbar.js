@@ -15,6 +15,7 @@ const Navbar = () => {
         'header',
         'about', 
         'experiences', 
+        'projects',
         'education', 
         'skills', 
         'certifications',
@@ -92,6 +93,13 @@ const Navbar = () => {
               style={{ cursor: 'pointer' }}
             >
               Experience
+            </a>
+            <a 
+              className={`navbar-item ${activeSection === 'projects' ? 'is-active' : ''}`}
+              onClick={() => scrollToSection('projects')}
+              style={{ cursor: 'pointer' }}
+            >
+              Projects
             </a>
             <a 
               className={`navbar-item ${activeSection === 'education' ? 'is-active' : ''}`}
