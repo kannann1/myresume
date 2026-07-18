@@ -5,7 +5,7 @@ export const site = {
   url: 'https://kannann1.netlify.app',
   title: 'Kannan N | Senior Staff DevOps Engineer & Kubestronaut',
   description:
-    'Senior Staff DevOps Engineer at Palo Alto Networks (Prisma AIRS, AI security) with 12+ years of experience in Kubernetes, AWS, Azure, GitOps and platform engineering. CNCF Kubestronaut — CKA, CKAD, CKS, KCNA, KCSA.',
+    'Senior Staff DevOps Engineer at Palo Alto Networks (Prisma AIRS, AI security) with 13+ years of experience in Kubernetes, AWS, Azure, GitOps and platform engineering. CNCF Kubestronaut — CKA, CKAD, CKS, KCNA, KCSA.',
   keywords:
     'DevOps Engineer, Cloud Engineer, Kubernetes, Kubestronaut, Docker, AWS, Azure, CI/CD, GitOps, Terraform, Ansible, Platform Engineering',
   themeColor: '#060b18'
@@ -32,7 +32,7 @@ export const person = {
     'I design and operate the platforms other engineers build on — Kubernetes at scale, ' +
     'multi-cloud infrastructure as code, and CI/CD that ships in minutes, not days.',
   stats: [
-    { value: '12+', label: 'Years of Experience' },
+    { value: '13+', label: 'Years of Experience' },
     { value: '19', label: 'Certifications' },
     { value: '99.95%', label: 'Uptime Delivered' },
     { value: '500+', label: 'Engineers Trained' }
@@ -47,7 +47,7 @@ export const person = {
 
 export const about = {
   intro:
-    'Platform-first DevOps leader with hands-on Kubernetes expertise and 12+ years of experience ' +
+    'Platform-first DevOps leader with hands-on Kubernetes expertise and 13+ years of experience ' +
     'architecting and operating high-scale infrastructure and developer platforms. ' +
     'A certified CKA, CKAD, CKS and CNCF Kubestronaut, I bring an automation-first mindset to everything I do.',
   highlights: [
