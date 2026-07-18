@@ -1,24 +1,21 @@
 import React from 'react'
 import Head from 'next/head'
+import '../styles/globals.css'
+import { site } from '../data/profile'
 
-function MyApp({ Component, pageProps }) {
-  const title = "Kannan N | DevOps & Cloud Engineer Portfolio"
-  const description = "Experienced DevOps & Cloud Engineer specializing in Kubernetes, AWS, Azure, and containerization with expertise in CI/CD pipelines and infrastructure automation."
-  
+export default function MyApp ({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>{title}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content={description} />
-        <meta name="keywords" content="DevOps Engineer, Cloud Engineer, Kubernetes, Docker, AWS, Azure, CI/CD, Infrastructure as Code, Terraform, Ansible" />
-        <meta name="author" content="Kannan N" />
-        <meta name="theme-color" content="#2c3e50" />
-        <link rel="canonical" href="https://techkannan.dev" />
+        <title>{site.title}</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <meta name='description' content={site.description} />
+        <meta name='keywords' content={site.keywords} />
+        <meta name='author' content='Kannan Narayanasamy' />
+        <meta name='theme-color' content={site.themeColor} />
+        <link rel='canonical' href={site.url} />
       </Head>
       <Component {...pageProps} />
     </>
   )
 }
-
-export default MyApp

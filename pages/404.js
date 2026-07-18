@@ -1,19 +1,44 @@
 import React from 'react'
 import Link from 'next/link'
 
-export default function Custom404() {
+export default function Custom404 () {
   return (
-    <section className="hero is-light is-fullheight">
-      <div className="hero-body">
-        <div className="container has-text-centered">
-          <h1 className="title is-1">404</h1>
-          <h2 className="subtitle is-3">Page Not Found</h2>
-          <p className="mt-4">The page you're looking for doesn't exist or has been moved.</p>
-          <Link href="/" className="button is-primary mt-5">
-            Return to Home
-          </Link>
-        </div>
+    <section className='wrap'>
+      <div className='backdrop' aria-hidden='true'>
+        <div className='aurora aurora-1' />
+        <div className='aurora aurora-2' />
       </div>
+      <p className='code mono'><span className='grad-text'>404</span></p>
+      <h1>Page not found</h1>
+      <p className='hint mono'>$ kubectl get page — Error from server (NotFound)</p>
+      <Link href='/' className='btn btn-primary'>
+        Return home
+      </Link>
+
+      <style jsx>{`
+        .wrap {
+          min-height: 100vh;
+          min-height: 100svh;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          gap: 18px;
+          padding: 24px;
+        }
+        .code {
+          font-size: clamp(4rem, 14vw, 8rem);
+          font-weight: 700;
+          line-height: 1;
+        }
+        h1 { font-size: 1.6rem; }
+        .hint {
+          color: var(--text-faint);
+          font-size: 0.85rem;
+          margin-bottom: 16px;
+        }
+      `}</style>
     </section>
   )
 }

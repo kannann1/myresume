@@ -1,149 +1,127 @@
 import React from 'react'
-import Title from './Title'
-import Interersts from './AboutInterest'
+import SectionHeader from './SectionHeader'
+import Reveal from './Reveal'
+import { about, person } from '../data/profile'
 
-export default () => {
+export default function About () {
   return (
-    <section id='about' className='hero wrapper has-text-centered'>
-      <Title title='About me' color='#ffffff' />
-      <div className='columns is-mobile'>
-        <div className='column has-text-right-tablet has-text-center is-12-mobile is-6-desktop'>
-          <dl>
-            <dt>FULL NAME</dt>
-            <dd>Kannan Narayanasamy</dd>
-            <dt>EMAIL</dt>
-            <dd><a href='mailto:n.kannan200@gmail.com'>n.kannan200@gmail.com</a></dd>
-            <dt>MOBILE NO.</dt>
-            <dd><a href='tel:+919591977331'>+91-9591977331</a></dd>
-          </dl>
+    <section id='about' className='section section-alt'>
+      <div className='container'>
+        <SectionHeader index='01' kicker='about' title='Building platforms' accent='engineers love' sub={about.intro} />
+
+        <div className='grid'>
+          {about.highlights.map((h, i) => (
+            <Reveal key={h.title} delay={i * 0.08}>
+              <div className='glass-card card'>
+                <div className='icon'>
+                  <i className={h.icon} />
+                </div>
+                <h3>{h.title}</h3>
+                <p>{h.text}</p>
+              </div>
+            </Reveal>
+          ))}
         </div>
-        <div className='column has-text-left'>
-          <img src='/static/images/mascot.png' className='mascot' />
-        </div>
-      </div>
-      <div className='columns'>
-        <div className='column detail is-10 is-offset-1 is-8-desktop is-offset-2-desktop is-10-mobile is-offset-1-mobile'>
-          <p className='about-intro'>
-            <strong>Platform-first DevOps leader with hands-on Kubernetes expertise and <span className="highlight-text">12+ years</span> of experience</strong> architecting and operating high-scale infrastructure and developer platforms. A certified CKA & CKAD, I bring a strong automation-first mindset to everything I do:
-          </p>
-          
-          <div className='about-highlights'>
-            <p className='highlight'>
-              <strong>Drive systemic impact:</strong> Led CI/CD and reliability initiatives that accelerated deployment speeds by <span className="highlight-text">60%</span>, improved system uptime above <span className="highlight-text">99.9%</span>, and cut incident response time by <span className="highlight-text">40%</span>.
-            </p>
-            
-            <p className='highlight'>
-              <strong>Deep technical expertise:</strong> Proficient in <span className="highlight-text">Kubernetes</span>, <span className="highlight-text">Terraform</span>, <span className="highlight-text">ArgoCD</span>, Prometheus, and GitOps. Designed and maintained platforms supporting millions of users, delivering robust, scalable, and secure infrastructure.
-            </p>
-            
-            <p className='highlight'>
-              <strong>Collaborative leadership:</strong> Partnered across engineering and product teams to drive alignment on platform goals. Mentored <span className="highlight-text">15+</span> engineers, established best practices around code reviews, documentation, and onboarding processes.
-            </p>
-            
-            <p className='highlight'>
-              <strong>Passionate communicator:</strong> Regularly deliver talks, write technical articles, and lead workshops to share knowledge and promote DevOps culture and continuous learning within organizations.
-            </p>
+
+        <Reveal>
+          <div className='glass-card outro'>
+            <p className='quote'>“{about.conclusion}”</p>
+            <div className='meta'>
+              <div className='meta-item'>
+                <i className='fas fa-location-dot' /> {person.location}
+              </div>
+              <a className='meta-item' href={`mailto:${person.email}`}>
+                <i className='fas fa-envelope' /> {person.email}
+              </a>
+              <div className='interests'>
+                {about.interests.map((it) => (
+                  <img key={it.name} src={it.image} alt={it.name} title={it.name} />
+                ))}
+              </div>
+            </div>
           </div>
-          
-          <p className='about-conclusion'>
-            I thrive on building resilient, automated infrastructure and developer-friendly platforms—and I'm eager to continue doing this in environments where engineering excellence, innovation, and teamwork are top priorities.
-          </p>
-        </div>
+        </Reveal>
       </div>
-      <Interersts />
+
       <style jsx>{`
-                    .wrapper {
-                        padding-top: 50px;
-                        padding-bottom: 50px;
-                        background: #34495e;
-                        color: #ffffff;
-                        font-size: 1.3em;
-                    }
-                    @media screen and (max-width: 768px) {
-                        .wrapper {
-                            padding-top: 30px;
-                            padding-bottom: 30px;
-                            font-size: 1.1em;
-                        }
-                    }
-                    dl > dt {
-                        color: #ffcc00;
-                        font-weight: bold;
-                    }
-                    dl > dd {
-                        margin-bottom: 30px;
-                    }
-                    @media screen and (max-width: 768px) {
-                        dl > dt {
-                            margin-top: 15px;
-                        }
-                        dl > dd {
-                            margin-bottom: 15px;
-                        }
-                    }
-                    .mascot {
-                        margin-left: 20px;
-                        width: 150px;
-                    }
-                    @media screen and (max-width: 768px) {
-                        .mascot {
-                            margin: 0 auto;
-                            width: 120px;
-                            display: block;
-                        }
-                    }
-                    .detail {
-                        font-size: 0.9em;
-                        line-height: 1.6;
-                    }
-                    @media screen and (max-width: 768px) {
-                        .detail {
-                            font-size: 0.85em;
-                            line-height: 1.5;
-                            padding: 0 0.5rem;
-                        }
-                    }
-                    .about-intro, .about-conclusion {
-                        margin-bottom: 1.8rem;
-                    }
-                    .about-highlights {
-                        margin-bottom: 1.8rem;
-                    }
-                    @media screen and (max-width: 768px) {
-                        .about-intro, .about-conclusion, .about-highlights {
-                            margin-bottom: 1.2rem;
-                        }
-                    }
-                    .highlight {
-                        margin-bottom: 1.2rem;
-                        position: relative;
-                        padding-left: 1rem;
-                        border-left: 3px solid #3498db;
-                    }
-                    @media screen and (max-width: 768px) {
-                        .highlight {
-                            margin-bottom: 1rem;
-                            padding-left: 0.75rem;
-                            text-align: left;
-                        }
-                    }
-                    .highlight strong {
-                        color: #ffcc00;
-                        margin-right: 0.5rem;
-                    }
-                    .about-conclusion {
-                        font-style: italic;
-                        line-height: 1.6;
-                        font-size: 1.05em;
-                    }
-                    @media screen and (max-width: 768px) {
-                        .about-conclusion {
-                            font-size: 0.95em;
-                            line-height: 1.5;
-                        }
-                    }
-                `}
-      </style>
+        .grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+          margin-bottom: 24px;
+        }
+        .card {
+          padding: 28px;
+          height: 100%;
+        }
+        .icon {
+          width: 48px;
+          height: 48px;
+          border-radius: 13px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: rgba(34, 211, 238, 0.1);
+          border: 1px solid rgba(34, 211, 238, 0.25);
+          color: var(--cyan);
+          font-size: 1.15rem;
+          margin-bottom: 18px;
+        }
+        .card h3 {
+          font-size: 1.12rem;
+          margin-bottom: 10px;
+        }
+        .card p {
+          color: var(--text-muted);
+          font-size: 0.95rem;
+        }
+        .outro {
+          padding: 30px 34px;
+          display: flex;
+          flex-direction: column;
+          gap: 18px;
+        }
+        .quote {
+          font-family: var(--font-display);
+          font-size: 1.15rem;
+          color: var(--text);
+          line-height: 1.5;
+        }
+        .meta {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          gap: 12px 26px;
+          color: var(--text-muted);
+          font-size: 0.9rem;
+        }
+        .meta-item {
+          display: inline-flex;
+          align-items: center;
+          gap: 9px;
+          color: var(--text-muted);
+        }
+        .meta-item:hover { color: var(--cyan); }
+        .meta-item i { color: var(--cyan); }
+        .interests {
+          display: flex;
+          gap: 14px;
+          margin-left: auto;
+        }
+        .interests img {
+          height: 34px;
+          filter: grayscale(0.4) brightness(1.4);
+          transition: transform 0.25s ease, filter 0.25s ease;
+        }
+        .interests img:hover {
+          transform: scale(1.25);
+          filter: none;
+        }
+        @media (max-width: 768px) {
+          .grid { grid-template-columns: 1fr; }
+          .interests { margin-left: 0; }
+        }
+      `}</style>
     </section>
   )
 }
