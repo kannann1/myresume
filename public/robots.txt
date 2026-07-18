@@ -16,4 +16,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://techkannan.dev/sitemap.xml
+Sitemap: https://kannann1.netlify.app/sitemap.xml
