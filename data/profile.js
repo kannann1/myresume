@@ -3,9 +3,9 @@
 
 export const site = {
   url: 'https://kannann1.netlify.app',
-  title: 'Kannan N | Lead DevOps Engineer & Kubestronaut',
+  title: 'Kannan N | Senior Staff DevOps Engineer & Kubestronaut',
   description:
-    'Lead DevOps Engineer with 12+ years of experience in Kubernetes, AWS, Azure, GitOps and platform engineering. CNCF Kubestronaut — CKA, CKAD, CKS, KCNA, KCSA.',
+    'Senior Staff DevOps Engineer at Palo Alto Networks (Prisma AIRS, AI security) with 12+ years of experience in Kubernetes, AWS, Azure, GitOps and platform engineering. CNCF Kubestronaut — CKA, CKAD, CKS, KCNA, KCSA.',
   keywords:
     'DevOps Engineer, Cloud Engineer, Kubernetes, Kubestronaut, Docker, AWS, Azure, CI/CD, GitOps, Terraform, Ansible, Platform Engineering',
   themeColor: '#060b18'
@@ -14,10 +14,11 @@ export const site = {
 export const person = {
   name: 'Kannan Narayanasamy',
   shortName: 'Kannan',
-  role: 'Lead DevOps Engineer',
+  role: 'Senior Staff DevOps Engineer',
   typedRoles: [
-    'Lead DevOps Engineer',
+    'Senior Staff DevOps Engineer',
     'CNCF Kubestronaut',
+    'AI Security Platform Builder',
     'Platform & Cloud Architect',
     'GitOps Practitioner',
     'Open-Source Contributor'
@@ -83,10 +84,23 @@ export const about = {
 
 export const experience = [
   {
+    company: 'Palo Alto Networks',
+    url: 'https://www.paloaltonetworks.com',
+    role: 'Senior Staff DevOps Engineer — Prisma AIRS (AI Security)',
+    period: 'Dec 2025 — Present',
+    color: '#fb923c',
+    stack: ['Kubernetes', 'Terraform', 'CI/CD', 'GitOps', 'Public Cloud', 'AI Security'],
+    bullets: [
+      'DevOps engineering for Prisma AIRS, Palo Alto Networks’ AI security platform protecting AI applications, models and agents in production.',
+      'Building and operating the cloud infrastructure, Kubernetes platforms and CI/CD pipelines that power AI runtime security services at enterprise scale.',
+      'Driving automation-first practices — infrastructure as code, GitOps delivery and observability — across the AI security engineering organisation.'
+    ]
+  },
+  {
     company: 'Netcracker Technologies',
     url: 'https://www.netcracker.com',
     role: 'Lead DevOps Engineer',
-    period: 'Nov 2024 — Present',
+    period: 'Nov 2024 — Dec 2025',
     color: '#818cf8',
     stack: ['Kubernetes', 'Terraform', 'Ansible', 'GitOps', 'Jenkins', 'Prometheus', 'EFK', 'qubership-envgene'],
     bullets: [

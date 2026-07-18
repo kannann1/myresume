@@ -30,7 +30,7 @@ export default function Experience () {
           kicker='experience'
           title='Where I have'
           accent='shipped'
-          sub='Six roles, three continents of customers, one constant: making delivery faster and platforms more reliable.'
+          sub='From IBM to Palo Alto Networks — seven roles, one constant: making delivery faster and platforms more reliable.'
         />
 
         <div className='timeline'>

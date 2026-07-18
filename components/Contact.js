@@ -63,8 +63,8 @@ export default function Contact () {
                   <em>kannan@cloud:~</em>
                 </div>
                 <p><span className='p'>$</span> kubectl get engineer kannan -o wide</p>
-                <p className='out'>NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;STATUS&nbsp;&nbsp;&nbsp;&nbsp;ROLE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AGE</p>
-                <p className='out'>kannan&nbsp;&nbsp;&nbsp;<span className='ok'>Available</span>&nbsp;&nbsp;Lead&nbsp;DevOps&nbsp;&nbsp;&nbsp;&nbsp;12y+</p>
+                <p className='out'>NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;STATUS&nbsp;&nbsp;&nbsp;&nbsp;ROLE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AGE</p>
+                <p className='out'>kannan&nbsp;&nbsp;&nbsp;<span className='ok'>Running</span>&nbsp;&nbsp;&nbsp;&nbsp;Sr&nbsp;Staff&nbsp;DevOps&nbsp;&nbsp;12y+</p>
                 <p><span className='p'>$</span> <span className='caret'>_</span></p>
               </div>
             </div>
